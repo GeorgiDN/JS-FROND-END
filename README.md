@@ -17,4 +17,4 @@ Online judge system - https://judge.softuni.org/
 ### JAVASCRIPT
 ➡ [01.JS-Fundamentals](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/01-js-fundamentals)
 
-➡ [02.JS-Arrays and Strings](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/02-jsArraysAndStrings/Lab
+➡ [02.JS-Arrays and Strings](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/02-jsArraysAndStrings/Lab)

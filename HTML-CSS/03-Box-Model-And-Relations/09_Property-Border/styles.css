@@ -1,5 +1,5 @@
 p {
     font-weight: bold;
     background-color: coral;
-    padding-inline: 30%;
+    border: 2px solid blue;
 }

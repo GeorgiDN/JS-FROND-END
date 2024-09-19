@@ -11,7 +11,7 @@ Online judge system - https://judge.softuni.org/
 
 ➡ [01.Introduction to HTML and CSS](https://github.com/GeorgiDN/JS-FROND-END/tree/main/01.Introduction%20to%20HTML%20anhttps://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/01-Introduction-to-HTML-and-CSS)
 
-➡ [02.Typography in CSS](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/02-Typography-in-CSS)
+➡ [02.CSS Box Model and Typography](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/02-CSS-Box-Model-And-Typography)
 
 
 ### JAVASCRIPT

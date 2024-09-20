@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+section {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
+.desc {
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.desc h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    padding-bottom: 0.8rem;
+}
+
+.desc p {
+    font-size: 1.4rem;
+}
+

@@ -1,0 +1,85 @@
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body, button, textarea, input {
+    font: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 2em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.links,
+.btn {
+    display: flex;
+    gap: 1rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+.links a,
+button {
+    text-decoration: none;
+    padding: 1rem 1.4rem;
+    border: none;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: #eee;
+}
+
+
+.primary {
+    background-color: orange;
+}
+
+.secondary {
+    background-color: lightgoldenrodyellow;
+}
+
+.outline {
+    background-color: #fff;
+}
+
+button {
+    cursor: pointer;
+  }
+
+.button:focus,
+.button:hover {
+    color: #fff;
+    background: #000;
+}
+
+.button.primary:hover {
+    background: darkorange;
+    color: #fff;
+}
+
+.button.secondary:hover {
+    background-color: lightblue;
+    color: #333;
+}
+
+.button.outline {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.button.outline:hover {
+    background: #eee;
+    color: #333;
+}

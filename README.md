@@ -13,8 +13,10 @@ Online judge system - https://judge.softuni.org/
 
 ➡ [02.CSS Box Model and Typography](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/02-CSS-Box-Model-And-Typography)
 
+➡ [03.CSS FlexBox Layout](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/03-CSS-Layout-Flexbox/Flex-Solutions-Judge)
 
 ### JAVASCRIPT
 ➡ [01.JS-Fundamentals](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/01-js-fundamentals)
 
 ➡ [02.JS-Arrays and Strings](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/02-jsArraysAndStrings/Lab)
+

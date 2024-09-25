@@ -1,11 +1,11 @@
-function countOccurrences (text = "", string) {
-    let pattern = new RegExp(`\\b${string}\\b`, "g");
-    let result = text.match(pattern);
-    console.log(result.length)
+function countOccurrences(text, word) {
+    const pattern = new RegExp(`\\b${word}\\b`, 'g');
+    const result = text.match(pattern) || [];
+    console.log(result.length);
 }
 
-countOccurrences('This is a word and it also is a sentence', 'is')
-countOccurrences('softuni is great place for learning new programming languages', 'softuni')
+countOccurrences('This is a word and it also is a sentence', 'is');
+countOccurrences('softuni is great place for learning new programming languages', 'softuni');
 
 
 
@@ -13,9 +13,9 @@ countOccurrences('softuni is great place for learning new programming languages'
 // function countOccurrences (text, string) {
 //     let arr = text.split(" ");
 //     let count = arr.filter(item => item === string).length;
-//     console.log(count)
+//     console.log(count);
 // }
-//
+
 
 
 
@@ -30,4 +30,4 @@ countOccurrences('softuni is great place for learning new programming languages'
 //
 //     console.log(count);
 // }
-
+//

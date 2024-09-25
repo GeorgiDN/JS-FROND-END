@@ -20,6 +20,6 @@ function cookingByNumbers(number, command1, command2, command3, command4, comman
                 startingNumber = startingNumber - startingNumber * 0.2
                 break;
         }
-        console.log(startingNumber)
+        console.log(startingNumber);
     });
 }

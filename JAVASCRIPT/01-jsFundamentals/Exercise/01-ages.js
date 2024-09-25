@@ -10,10 +10,10 @@ function ageDefine(num) {
         let start = ageRange[0]
         let end = ageRange[1]
         if (num >= start && num <= end) {
-            return console.log(group)
+            return console.log(group);
         }
     }
-    console.log("out of bounds")
+    console.log("out of bounds");
 }
 
 // ageDefine(-1)

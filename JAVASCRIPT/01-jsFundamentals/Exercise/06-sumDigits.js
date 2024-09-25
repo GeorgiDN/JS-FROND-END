@@ -4,7 +4,7 @@ function sumDigits (num) {
     for (let digit of stingNum) {
         totalSum += Number(digit)
     }
-    console.log(totalSum)
+    console.log(totalSum);
 }
 
 // sumDigits(245678)

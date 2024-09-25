@@ -1,8 +1,8 @@
 function sameNumber(number) {
-    let stringNumber = number.toString()
-    let totalSum = 0
-    let result = true
-    let firstDigit = Number(stringNumber[0])
+    let stringNumber = number.toString();
+    let totalSum = 0;
+    let result = true;
+    let firstDigit = Number(stringNumber[0]);
 
     for (let num of stringNumber) {
         totalSum += Number(num)
@@ -10,8 +10,8 @@ function sameNumber(number) {
             result = false
         }
     }
-    console.log(result)
-    console.log(totalSum)
+    console.log(result);
+    console.log(totalSum);
 }
 
 // sameNumber(2222222)

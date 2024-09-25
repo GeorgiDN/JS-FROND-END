@@ -17,8 +17,8 @@ function calculatePrice(numberOfPeople, group, day) {
             "Sunday": 22.50,
         },
     }
-    let price = dictionary[group][day]
-    let totalPrice = price * numberOfPeople
+    let price = dictionary[group][day];
+    let totalPrice = price * numberOfPeople;
     if (group === "Students") {
         if (numberOfPeople >= 30) {
             totalPrice *= 0.85

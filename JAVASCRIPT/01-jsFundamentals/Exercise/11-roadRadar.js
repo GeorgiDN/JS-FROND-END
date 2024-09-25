@@ -1,6 +1,6 @@
 function roadRadar(speed, area) {
-    let speedLimit
-    let status
+    let speedLimit;
+    let status;
 
     if (area === "motorway") speedLimit = 130
     else if (area === "interstate") speedLimit = 90

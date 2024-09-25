@@ -4,7 +4,7 @@ function reversedChars (char1, char2, char3) {
     result.push(char2)
     result.push(char3)
     result = result.reverse()
-    console.log(result.join(" "))
+    console.log(result.join(" "));
 }
 
 // reversedChars('A', 'B', 'C')

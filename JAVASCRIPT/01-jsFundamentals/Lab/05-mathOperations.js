@@ -1,29 +1,30 @@
-function calculateResult(num1, num2, operator) {
+function mathOperations(firstNumber, secondNumber, operator) {
     let result;
-
     switch (operator) {
-        case '+':
-            result = num1 + num2;
+        case "+":
+            result = firstNumber + secondNumber;
             break;
-        case '-':
-            result = num1 - num2;
+        case "-":
+            result = firstNumber - secondNumber;
             break;
-        case '*':
-            result = num1 * num2;
+        case "/":
+            result = firstNumber / secondNumber
             break;
-        case '/':
-            result = num1 / num2;
+        case "*":
+            result = firstNumber * secondNumber;
             break;
-        // default:
-        //     console.log('Invalid operator');
-        //     return;
+        case "%":
+            result = firstNumber % secondNumber;
+            break;
+        case "**":
+            result = firstNumber ** secondNumber;
+            break;
     }
-
     console.log(result);
 }
 
 // Example usage
-calculateResult(5, 6, '+');
-calculateResult(10, 3, '-');
-calculateResult(4, 5, '*');
-calculateResult(20, 4, '/');
+mathOperations(5, 6, '+');
+mathOperations(10, 3, '-');
+mathOperations(4, 5, '*');
+mathOperations(20, 4, '/');

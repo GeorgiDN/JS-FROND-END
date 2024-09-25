@@ -16,7 +16,7 @@ function monthPrinter(num) {
     if (num in dictionary) {
         console.log(dictionary[num])
     } else {
-        console.log("Error")
+        console.log("Error!")
     }
 }
 

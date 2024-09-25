@@ -20,13 +20,13 @@ function promotions(day, age) {
     if (dictionary[day]) {
         for (let range of dictionary[day]) {
             if (age >= range.min && age <= range.max) {
-                return console.log(range.value+"$")
+                return console.log(range.value+"$");
             }
         }
     }
 
-    console.log("Error!")
+    console.log("Error!");
 }
 
-promotions('Weekday', 42)
-promotions('Holiday', -12)
+promotions('Weekday', 42);
+promotions('Holiday', -12);

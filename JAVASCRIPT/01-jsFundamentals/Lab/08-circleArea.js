@@ -1,14 +1,14 @@
-function solve(input) {
-    let result
-    let inputType = typeof(input)
+function circleArea(input) {
+    let output;
+    typeOfInput = typeof (input);
 
-    if (inputType === "number") {
-        result =Math.pow(input, 2) * Math.PI
-        console.log(result.toFixed(2))
+    if (typeOfInput === 'number') {
+        output = Math.pow(input, 2) * Math.PI;
+        console.log(output.toFixed(2));
     } else {
-        console.log("We can not calculate the circle area, because we receive a string.")
+        console.log(`We can not calculate the circle area, because we receive a ${typeOfInput}.`);
     }
 }
 
-solve(5)
-solve("name")
+circleArea(5);
+circleArea("name");

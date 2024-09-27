@@ -15,3 +15,15 @@ stringSubstring('javascript',
 stringSubstring('python',
 'JavaScript is the best programming language'
 );
+
+
+// function stringSubstring(word, string) {
+//     let regex = new RegExp(`\\b${word}\\b`, "i");
+//     let result = string.match(regex);
+//     if (result !== null) {
+//         console.log(word);
+//     } else {
+//         console.log(`${word} not found!`);
+//     }
+// }
+

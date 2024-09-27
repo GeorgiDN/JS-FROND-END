@@ -8,3 +8,21 @@ function listOfNames(namesArray) {
 }
 
 listOfNames(["John", "Bob", "Christina", "Ema"])
+
+
+
+// function listOfNames(namesArray) {
+//     namesArray.sort((a, b) => a.localeCompare(b)).map((name, index) => {
+//         console.log(`${index + 1}.${name}`);
+//     })
+// }
+
+
+
+// function listOfNames(namesArray) {
+//     let sortedResult = namesArray.slice()
+//         .sort((a, b) => a.localeCompare(b))
+//         .map((name, index) => `${index + 1}.${name}`)
+//         .join("\n");
+//     console.log(sortedResult)
+// }

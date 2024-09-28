@@ -8,11 +8,6 @@ function signCheck(firstNumber, secondNumber, thirdNumber) {
     }
 
     return negativeCount % 2 === 1 ? "Negative" : "Positive";
-
 }
 
-
-console.log(signCheck(5,
- 12,
--15
-))
+console.log(signCheck(5, 12, -15));

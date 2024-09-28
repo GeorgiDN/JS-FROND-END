@@ -20,3 +20,5 @@ Online judge system - https://judge.softuni.org/
 
 ➡ [02.JS-Arrays and Strings](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/02-jsArraysAndStrings/Lab)
 
+➡ [03.Functions and Statements](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/03-functionsAndStatements/Exercise)
+

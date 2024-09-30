@@ -6,11 +6,11 @@ function nxnMatrix(num) {
         for (let j = 0; j < num; j++) {
             arr.push(num);
         }
-        matrix.push(arr)
+        matrix.push(arr);
     }
 
     for (let row of matrix) {
-        console.log(row.join(" "))
+        console.log(row.join(" "));
     }
 }
 

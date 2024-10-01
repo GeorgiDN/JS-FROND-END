@@ -1,7 +1,7 @@
 function factorialDivision(firstNumber, secondNumber) {
     function calculateFactorial(num) {
         if (num === 1) {
-            return 1;
+            return num;
         } else {
             return num * calculateFactorial(num - 1);
         }

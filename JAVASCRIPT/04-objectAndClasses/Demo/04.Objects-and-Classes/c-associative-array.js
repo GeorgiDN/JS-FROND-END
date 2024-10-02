@@ -43,7 +43,10 @@ if (phonebook.hasOwnProperty('John Doe')) {
 delete phonebook['John Doe'];
 console.log(phonebook);
 
+console.log("------------------------------------------------------------")
+console.log("-------------------------Sort By key------------------------")
 // Sorting associative array by key
+
 let phonebookEntries = Object.entries(phonebook);
 console.log(phonebookEntries);
 
@@ -57,6 +60,9 @@ for (const [name, phone] of phonebookEntries) {
 const sortedPhonebook = Object.fromEntries(phonebookEntries);
 console.log(sortedPhonebook);
 
+
+console.log()
+console.log("---------------------Sort by value-----------------------------")
 // Sort associative array by value
 let towns = {
     'Pleven': 80000,
@@ -65,8 +71,32 @@ let towns = {
     'Plovdiv': 340000,
 };
 
-const townEntries = Object.entries(towns);
+let townEntries = Object.entries(towns);
 townEntries
     .sort((a, b) => b[1] - a[1])
     .forEach(town => console.log(`${town[0]} -> ${town[1]}`));
 
+
+towns = {
+    'Pleven': 80000,
+    'Sofia': 1236000,
+    'Bourgas': 200000,
+    'Plovdiv': 340000,
+    'Varna': 340000, // Example of a city with the same population as 'Plovdiv'
+};
+
+
+console.log()
+console.log("---------------------Sort by value and key-----------------------------")
+townEntries = Object.entries(towns);
+townEntries
+    .sort((a, b) => {
+        // First, compare by value (population)
+        if (b[1] === a[1]) {
+            // If the values are the same, compare by key (name)
+            return a[0].localeCompare(b[0]);
+        }
+        // Otherwise, compare by value
+        return a[1] - b[1];
+    })
+    .forEach(town => console.log(`${town[0]} -> ${town[1]}`));

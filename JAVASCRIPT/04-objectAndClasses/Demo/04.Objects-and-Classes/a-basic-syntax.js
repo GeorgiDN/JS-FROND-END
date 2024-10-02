@@ -72,8 +72,8 @@ console.log(Object.entries(person));
 let propName = 'name';
 console.log(person[propName]);
 //
-// // Object destructuring assignment
-// let { country, name: townName, ...rest } = town;
-// console.log(country);
-// console.log(townName);
-// console.log(rest);
+// Object destructuring assignment
+let { country, name: townName, ...rest } = town;
+console.log(country);
+console.log(townName);
+console.log(rest);

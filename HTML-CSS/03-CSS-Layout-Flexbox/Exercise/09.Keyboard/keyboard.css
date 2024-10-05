@@ -1,0 +1,141 @@
+:root {
+    --dark-gray: #dedede;
+    --white: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-size: 12px;
+}
+
+.keyboard {
+    width: 800px;
+    background: #ccc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #999;
+    box-shadow: 0 0.2rem 0 0 #aaa;
+}
+
+button {
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0.2rem 0 0 #aaa;
+    padding: 0.8rem;
+    flex-basis: 3rem;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.key.special {
+    flex-grow: 2;
+    background-color: var(--dark-gray);
+}
+
+.key-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.first-row button {
+    padding: 0.5rem 0.8rem;
+}
+
+.tab {
+    flex-basis: 5.5rem; 
+}
+
+.capslock {
+    flex-basis: 6.5rem; 
+}
+
+.shift-left {
+    flex-basis: 4rem; 
+}
+
+.backspace {
+    flex-basis: 6.5rem;
+}
+.enter {
+    flex-basis: 5.5rem;
+}
+
+.enter-down {
+    flex-basis: 4.3rem;
+}
+
+.shift-right {
+    flex-basis: 9.5rem; 
+}
+
+.ctrl,
+.alt,
+.win {
+    flex-basis: 4.5rem; 
+}
+
+.space {
+    flex-basis: 10rem;
+}
+
+.last-row .space {
+    flex-grow: 1200;
+}
+
+.last-row .ctrl,
+.last-row .alt,
+.last-row .win {
+    background-color: var(--dark-gray);
+}
+
+.enter::after{
+    display: block;
+    content: '';
+    width: 58px;
+    height: 1rem;
+    position: absolute;
+    left: 14.5px;
+    top: 41px;
+    background-color: var(--dark-gray);
+} 
+
+.third-row {
+    align-items: center;
+}
+
+.enter {
+    position: relative;
+    border-bottom-right-radius: 0;
+}
+
+.enter-down {
+    position: relative;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/* .key:active {
+    box-shadow: 0 0 0 0 #333;
+    position: relative;
+    top: 0.15rem;
+}
+
+.key:hover {
+    background-color: #343333;
+    color: #fff;
+}
+
+.key:hover,
+.key:focus-visible {
+    background: #666 !important;
+    color: #fff;
+    border-color: #333;
+    box-shadow: 0 0.2em 0 0 #333;
+} */

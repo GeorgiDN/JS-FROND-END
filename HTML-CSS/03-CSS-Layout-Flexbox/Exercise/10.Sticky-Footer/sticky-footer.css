@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font: 16px/1.5 Lato, sans-serif;
+    border: 1px solid green;
+    padding: 1.5rem;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 1.5rem;
+
+}
+
+.site-header,
+.site-main,
+.site-footer {
+    border: 2px solid blue;
+    padding: 1rem;
+}
+
+.container .site-main {
+    flex: 1;
+}
+

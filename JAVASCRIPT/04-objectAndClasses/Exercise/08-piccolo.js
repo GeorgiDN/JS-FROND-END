@@ -1,7 +1,7 @@
-function solve(input) {
+function solve(inputArray) {
     let parking = new Set();
 
-    input.forEach(data => {
+    inputArray.forEach((data) => {
         let [direction, carNumber] = data.split(", ");
         if (direction === "IN") {
             parking.add(carNumber);
@@ -10,14 +10,39 @@ function solve(input) {
         }
     });
 
-    if (parking.size > 0) {
-        Array.from(parking)
-            .sort((a, b) => a.localeCompare(b))
-            .forEach(carNumber => console.log(carNumber));
-    } else {
+    if (parking.size === 0) {
         console.log("Parking Lot is Empty");
     }
+
+    let outputArray = Array.from(parking);
+    outputArray.sort((a, b) => a.localeCompare(b))
+        .forEach((num) => console.log(num));
 }
+
+
+
+
+// function solve(input) {
+//     let parking = new Set();
+//
+//     input.forEach(data => {
+//         let [direction, carNumber] = data.split(", ");
+//         if (direction === "IN") {
+//             parking.add(carNumber);
+//         } else if (direction === "OUT") {
+//             parking.delete(carNumber);
+//         }
+//     });
+//
+//     if (parking.size > 0) {
+//         Array.from(parking)
+//             .sort((a, b) => a.localeCompare(b))
+//             .forEach(carNumber => console.log(carNumber));
+//     } else {
+//         console.log("Parking Lot is Empty");
+//     }
+// }
+
 
 solve(['IN, CA2844AA',
 'IN, CA1234TA',

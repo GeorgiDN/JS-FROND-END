@@ -1,4 +1,4 @@
-function browserHistory(obj, actionsArray) {
+function solve(obj, actionsArray) {
     let commandIsOpen = (command) => command.startsWith('Open');
     let commandIsClose = (command) => command.startsWith('Close');
     let commandIsClearHistory = (command) => command === 'Clear History and Cache'

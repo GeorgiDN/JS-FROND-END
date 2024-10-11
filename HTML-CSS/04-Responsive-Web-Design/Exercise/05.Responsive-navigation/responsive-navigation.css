@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px/1.5 Lato, sans-serif;
+    background-color: #eee;
+}
+
+.header {
+    max-width: 1200px;
+    background-color: #fff;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.header ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.header ul li {
+    list-style-type: none;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: #000;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 0.2rem;
+}
+
+

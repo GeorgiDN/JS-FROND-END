@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #eee;
+    font: 16px/1.5 Helvetica, sans-serif;
+    padding: 2em;
+  }
+
+table {
+    background: #fff;
+    border-radius: 0.5em;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 2em;
+    overflow: hidden;
+}
+
+table .header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+table th, 
+table td {
+    padding: 0.8em 1em;
+    text-align: left;
+}
+
+table {
+    position: relative;
+}
+
+.align-left {
+    position: absolute;
+    left: 20%
+}
+
+.align-right {
+    position: absolute;
+    left: 80%;
+}
+
+table tr {
+    border: 1px solid #ccc;
+}
+
+table thead th {
+    border: solid #CCC;
+    border-width: 1px 0;
+    background: #eee;
+}
+
+table tbody td {
+    border-bottom: 1px solid #ccc;
+}
+

@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font: 16px/1.5 Lato, sans-serif;
+    border: 1px solid green;
+    padding: 1.5rem;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2.5em 2em;
+    max-width: 1200px;
+    border-radius: 4px;
+    box-shadow: 0 0 1rem 0 rgb(0,0,0, 0.2);
+    gap: 2.5rem;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-top: -0.6rem;
+}
+
+.container h2,
+.container p {
+    color: gray;
+}
+
+.btn {
+    padding-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.2rem;
+    font: inherit;
+    color: gray;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+.lets-chat {
+    color: #fff;
+    background-color: #663399;
+    
+}
+
+.media {
+    width: 100%;
+    background-color: #eee;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+
+@media (min-width: 800px) and (max-width:1000px) {
+    .container .desc {
+        max-width: 60%;
+    }
+
+    .container h1 {
+        line-height: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 799px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .media {
+        order: -1;
+        width: 100%;
+        height: 160px
+    }
+}

@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 14px/1.5 Lato, sans-serif;
+    background-color: #eee;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2em auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+}
+
+.card {
+    margin: 0em auto;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.3em;
+    position: relative;
+    overflow: hidden;
+    min-width: 390px;
+}
+
+.card .header {
+    overflow: hidden;
+    margin-bottom: 4em;
+}
+
+.card .header img{
+    border-radius: 0.2em;
+    width: 100%;
+}
+
+.course-type {
+    position: absolute;
+    color: #fff;
+    border-radius: 0.3em;
+    opacity: 60%;
+    padding: 0.2em;
+    right: 0.5em;
+}
+
+.first-card .course-type{
+    background-color: rgb(7, 150, 79);
+}
+
+.second-card .course-type{
+    background-color: purple;
+}
+
+.third-card .course-type{
+    background-color: orange;
+}
+
+.avatar {
+    position: absolute;
+    right: -3em;
+    top: 11.8em;
+    z-index: 300;
+}
+
+.avatar img {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    width: 50%;
+}
+
+.card .name {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    background-color: #fff;
+    width: 30%;
+    padding: 0.5em 0.6em;
+    border-radius: 0.3em;
+    position: absolute;
+    right: 3em;
+    top: 17.8em;
+    z-index: 200;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+}
+
+
+.desc {
+    font-size: 12px;
+    background-color: #fff;
+    width: 90%;
+    position: absolute;
+    right: 5%;
+    top: 38.5%;
+    padding: 1em;
+    z-index: 100;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+
+}
+
+.desc h2 {
+    border-bottom: 2px solid #ccc;
+}
+
+.groups {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.groups header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.2em;
+    align-items: flex-end;
+}
+
+.groups header h3 {
+    font-size: 1.1em;
+}
+
+.groups header h4 {
+    color: #4ddc99;
+    font-size: 0.9em;
+}
+
+
+.courses-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    font-size: 12.5px;
+    font-weight: normal;
+    color: #6b6b6b;
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+    padding: 0.8em;
+}
+
+.container .price {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.course-total {
+    background-color:  #fff;
+    color: #3abe81;
+    font-weight: 600;
+}
+
+.course-total .total-price {
+    font-size: 1.6em;
+}
+
+.card:hover {
+    box-shadow: 0 0 0 0 #333;
+    position: relative;
+    top: 0.15rem;
+}
+
+.course-total:hover {
+    background-color: green;
+    box-shadow: 0 0 0 0 #333;
+    position: relative;
+    top: 0.15rem;
+}
+
+.course-total {
+    cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 600px;
+    }
+
+    .avatar {
+        top: 20em;
+    }
+
+    .card .name  {
+        top: 29em;
+
+    }
+
+    .card .desc {
+        top: 25.5em;
+    }
+
+}

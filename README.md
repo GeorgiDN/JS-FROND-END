@@ -15,6 +15,8 @@ Online judge system - https://judge.softuni.org/
 
 ➡ [03.CSS FlexBox Layout](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/03-CSS-Layout-Flexbox/Flex-Solutions-Judge)
 
+➡ [04.Responsive Web Design](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/04-Responsive-Web-Design)
+
 ### JAVASCRIPT
 ➡ [01.JS-Fundamentals](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/01-js-fundamentals)
 
@@ -22,3 +24,4 @@ Online judge system - https://judge.softuni.org/
 
 ➡ [03.Functions and Statements](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/03-functionsAndStatements/Exercise)
 
+➡ [04.Object and Classes](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/04-objectAndClasses)

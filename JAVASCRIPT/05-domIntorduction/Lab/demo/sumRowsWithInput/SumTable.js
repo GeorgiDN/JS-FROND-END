@@ -4,11 +4,10 @@ function sumTable() {
     let sum = 0;
 
     for (let i = 1; i < rows.length - 1; i++) {
-        const cells = rows[i].querySelectorAll('td');
-        const cost = parseFloat(cells[cells.length - 1].textContent);
+        const input = rows[i].querySelector('input');
+        const cost = parseFloat(input.value);
         sum += cost;
+
+        document.getElementById('sum').textContent = sum.toFixed(2);
     }
-
-    document.getElementById('sum').textContent = sum.toFixed(2);
 }
-

@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font: 16px/1.2 Helvetica, sans-serif;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+form, textarea, input, label {
+    font: inherit
+}
+
+form {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+    padding: 2em 2.5em 4em 2.5em;
+}
+
+header {
+    padding-bottom: 2em;
+}
+
+header h2 {
+    padding-bottom: 1em;
+}
+
+header .separator {
+    width: 15%;
+    height: 2px;
+    background-color: #ccc;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5em;
+    
+}
+
+.field label {
+    order: -1;
+    font-weight: bold;
+}
+
+input {
+    padding: 1em;
+    border-radius: 0.3em;
+    border: 2px solid #ccc;
+    outline: none;
+}
+
+
+form input[required] ~ label::after {
+    content: "*";
+    color: red;
+    margin-left: 2px;
+    font-size: 16px;
+}
+
+form label:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: orange;
+}
+
+input:focus ~ label{
+    color: darkorange;
+}
+
+input:user-invalid {
+    border-color: red;
+}
+
+input:user-invalid ~ label{
+    color: red;
+}
+
+input:user-valid ~ label {
+    color: #0eb80e;
+}
+
+input:user-valid {
+    border-color: #0eb80e;
+}
+
+input[type=submit] {
+    display: block;
+    width: 100%;
+    background-color: orange;
+    margin-top: 1.2em;
+    border: 2px solid orange;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+input[type=submit]:hover {
+    background-color: darkorange;
+}
+
+input[type=submit]:active {
+    position: relative;
+    top: 0.15em;
+}
+
+
+
+
+
+/* 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body, input, select, button {
+    font: inherit;
+}
+
+body {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+  }
+
+.registration-form {
+    background: #fff;
+    width: 35em;
+    margin: auto;
+    padding: 2rem 3.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+}
+
+.registration-form header {
+    padding-bottom: 1.6rem;
+    font-size: 1.4em;
+}
+
+.registration-form .separator {
+    width: 5.8rem;
+    height: 2px;
+    background-color: lightgray;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.registration-form .field {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+}
+
+.registration-form .field input {
+    order: 2;
+}
+
+.registration-form .field label {
+    order: 1;
+    font-size: 1.2em;
+}
+
+.registration-form input[required] ~ label::after {
+    display: inline-block;
+    content: "*";
+    padding-left: 0.2rem;
+    color: red;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.registration-form input {
+    padding: 1rem 0.4rem;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+}
+
+.registration-form .submit {
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    background-color: #ff8c00;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    font-size: 1.2em;
+} */

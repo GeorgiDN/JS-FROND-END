@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons and State</title>
+    <link rel="stylesheet" href="icons-and-state.css">
+</head>
+<body>
+    <form action="#">
+        <header>
+            <h2>Login</h2>
+            <div class="separator"></div>
+        </header>
+        
+        <div class="field">
+            <input type="email" name="email" id="email" required
+                   pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+                   title="Please enter a valid email. e.g., konstantin.dankov@gmail.com">
+            <div class="label">
+                <label for="email">Email</label>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <span class="help-block">example: konstantin.dankov@gmail.com</span>
+        </div>
+
+        <div class="field">
+            <input type="password" name="password" id="password" required
+                   pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&_])[A-Za-z\d@$!%*#?&_]{6,}$"
+                   title="Password must be at least 6 characters, contain letters, numbers, and at least one special character.">
+            <div class="label">
+                <label for="password">Password</label>
+                <i class="fa-solid fa-key"></i>
+            </div>
+            <span class="help-block">minimum 6 characters, letters and numbers, at least one special character</span>
+        </div>
+
+        <input class="submit" type="submit" value="Login">
+    </form>
+</body>
+</html>

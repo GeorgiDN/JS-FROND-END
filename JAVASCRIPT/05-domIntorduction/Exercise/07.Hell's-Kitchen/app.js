@@ -71,7 +71,6 @@ function solve() {
 //                 restaurantData[restaurant] = {};
 //             }
 //
-//
 //             workers.split(", ").forEach((worker) => {
 //                 let [name, salary] = worker.split(" ");
 //                 restaurantData[restaurant][name] = Number(salary);
@@ -105,7 +104,8 @@ function solve() {
 //         });
 //
 //         let bestRestaurantEl = document.getElementById("bestRestaurant");
-//         bestRestaurantEl.querySelector("p").textContent = `Name: ${bestRestaurant} Average Salary: ${highestAverageSalary} Best Salary: ${bestSalary}`
+//         bestRestaurantEl.querySelector("p").textContent =
+//             `Name: ${bestRestaurant} Average Salary: ${highestAverageSalary} Best Salary: ${bestSalary}`
 //
 //         let bestRestaurantWorkersEl = document.getElementById("workers");
 //         let bestRestaurantWorkersArray = [];

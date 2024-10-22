@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="floating-labels.css">
+</head>
+<body>
+    <form action="#">
+        <header>
+            <h2>Login</h2>
+        </header>
+        <div class="field">
+            <input type="email" name="email" id="email" required placeholder="Email">
+            <label for="email">Email</label>
+            <span class="help-block">example: konstantin.dankov@gmail.com</span>
+        </div>
+        <div class="field">
+            <input type="password" name="password" id="password" required placeholder="Password">
+            <label for="password">Password</label>
+            <span class="help-block">minimum 6 characters, letters and numbers, at least one special character</span>
+        </div>
+        <input class="submit" type="submit" value="Login">
+    </form>
+</body>
+</html>

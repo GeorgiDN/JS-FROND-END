@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Helvetica, sans-serif;
+}
+
+body, input, form, select, button, textarea {
+    font: inherit;
+}
+
+body {
+    background: #eee;
+    padding: 2em;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: #fff;
+    padding: 1.2em;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em;
+    max-width: 1200px;
+    width: 100%;
+}
+
+input {
+    padding: 1em;
+    border-radius: 0.3em;
+    border: none;
+    background-color: #eee;
+}
+
+input[type=text] {
+    flex: 1 0 20ch;
+}
+
+input[type=email] {
+    flex: 2 0 40ch;
+}
+
+input[type=submit] {
+    background-color: orange;
+    color: #fff;
+    flex: 1 0 15ch;
+}
+
+
+
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body, input, form, select, button, textarea {
+    font: inherit;
+}
+
+body {
+    background: #eee;
+    padding: 2em;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe-form {
+    flex: 0 1 900px;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 0.1em;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.subscribe-form input {
+    display: block;
+    width: 100%;
+    background-color: #eee;
+    border: none;
+    border-radius: 0.2em;
+    padding: 0.8em 1.4em;
+}
+
+.subscribe-form input[type="text"] {
+    flex: 1 0 20ch;
+}
+
+.subscribe-form input[type="email"] {
+    flex: 2 0 40ch;
+}
+
+.subscribe-form input[type="submit"] {
+    background-color: darkorange;
+    color: #fff;
+    flex: 1 0 15ch;
+}
+ */

@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px/1.2 Lato, sans-serif;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form, textarea, input, label {
+    font: inherit
+}
+
+form {
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+    padding: 2.5em;
+}
+
+fieldset {
+    padding: 3em 2em 0em;
+    border: 2px solid #DDD;
+    border-radius: 0.3em;
+    margin-bottom: 2em;
+}
+
+fieldset legend {
+    padding: 0 1em;
+    margin-left: -1em;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+header {
+    padding-bottom: 3em;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3em;
+    position: relative;
+}
+
+.field label {
+    order: -1;
+    font-weight: bold;
+    position: absolute;
+    transition:
+        translate 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+    opacity: 0.7;
+}
+
+input::placeholder {
+    opacity: 0%;
+}
+
+.field label {
+    top: -1.8em;
+    opacity: 65%;
+}
+
+.field:has(input:placeholder-shown) label {
+    translate: 0 1.8em;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    padding-bottom: 1.2em;
+}
+
+form label:hover {
+    cursor: pointer;
+}
+
+form .help-block {
+    font-style: italic;
+    color: #aaa;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: orange;
+    
+}
+
+input:focus ~ label{
+    color: darkorange;
+}
+
+input:user-invalid {
+    border-color: red;
+}
+
+input:user-invalid ~ label{
+    color: red;
+}
+
+input:user-valid ~ label {
+    color: #0eb80e;
+}
+
+input:user-valid {
+    border-color: #0eb80e;
+}
+
+input[type=submit] {
+    display: block;
+    width: 100%;
+    background-color: #eee;
+    border: 2px solid #eee;
+    cursor: pointer;
+    color: #000000;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+input[type=submit]:hover {
+    background-color: darkorange;
+    border-color: darkorange;
+}
+
+input[type=submit]:active {
+    position: relative;
+    top: 0.15em;
+}

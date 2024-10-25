@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body, input, select, option, button {
+    font: inherit;
+}
+
+body {
+    padding: 2em;
+    background-color: #eee;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2em;
+    background: #fff;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.1)
+}
+
+form h2 {
+    margin-bottom: 1rem;
+}
+
+input, label{
+    display: block;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[required] ~ label::after {
+    display: inline-block;
+    content: "*";
+    padding-left: 0.3em;
+    color: #C00;
+}
+
+input {
+    padding: 0.5em 0.8em;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 0.3em;
+    outline: none;
+}
+
+input:focus {
+    border-color: orange;
+}
+
+input:focus ~ label{
+    color: darkorange;
+}
+
+input:user-invalid {
+    border-color: red;
+}
+
+input:user-invalid ~ label{
+    color: red;
+}
+
+input:user-valid {
+    border-color: #090;
+}
+
+input:user-valid ~ label {
+    color: #090;
+}
+
+input[type="submit"]{
+    border-color: #ccc;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5em;
+}
+
+.field label {
+    order: -1;
+}

@@ -17,6 +17,10 @@ Online judge system - https://judge.softuni.org/
 
 ➡ [04.Responsive Web Design](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/04-Responsive-Web-Design)
 
+➡ [05.Working with Forms](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/05-Working-with-Forms)
+
+➡ [HTM-CSS-Commons](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/HTML-CSS-Commons)
+
 ### JAVASCRIPT
 ➡ [01.JS-Fundamentals](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/01-js-fundamentals)
 

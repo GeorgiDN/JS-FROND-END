@@ -1,0 +1,117 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Helvetica";
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+body {
+    background-color: #ccc;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form {
+    min-width: 350px;
+}
+
+a, input, button {
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.form-container {
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 50px;
+}
+
+.form-container.youtube, 
+.youtube button[type=submit] {
+    background: red;
+}
+
+
+.fa-github, 
+.fa-youtube {
+    position: absolute;
+    top: 0.8rem;
+    right: 2rem;
+    font-size: 4.2rem;
+}
+
+.form-container > form {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label[for=search] {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+input[type=search] {
+    background: silver;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 1.2rem;
+}
+
+input[type=search]:focus {
+    outline: 0;
+    background: gray;
+}
+
+input[type=search]::placeholder {
+    color: #fff;
+}
+
+button[type=submit] {
+    position: absolute;
+    bottom: 1px;
+    right: 3px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: gray;
+    color: #000;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+legend {
+    font-size: 16px;
+    padding-bottom: 0.3rem;
+}

@@ -18,6 +18,7 @@ body{
     flex-wrap: wrap;
 }
 
+
 #exercise{   
     width: 70%;
     float: left;
@@ -44,7 +45,7 @@ input[type="button"], button{
     border:2px solid black;
     display: inline-block;
     margin-left: 12%;
-    width: 18%;
+    width: 22%;
     vertical-align: top;
 }
 

@@ -16,8 +16,9 @@ body{
     margin: 0;
     min-height: 100vh;
     flex-wrap: wrap;
+    background-color: #ddd;
 }
-#main{   
+#main{
     margin: 0 auto;
     width: 50%;
 }

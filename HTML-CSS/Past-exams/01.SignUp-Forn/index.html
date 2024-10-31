@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form class="register-form" action="#">
+        <ul class="navigation">
+            <li><a class="sign-up" href="#">Sign Up</a></li>
+            <li><a class="log-in" href="#">Log In</a></li>
+        </ul>
+        
+        <h2 class="title">Sign Up for free</h2>
+
+        <div class="names">
+            <div class="field">
+                <input type="text" name="first-name" id="first-name" required>
+            <label for="first-name">First Name</label>
+            </div>
+
+            <div class="field">
+                <input type="text" name="last-name" id="last-name" required>
+            <label for="last-name">Last Name</label>
+            </div>
+        </div>
+        
+        <div class="field">
+            <input type="text" name="email" id="email" required>
+        <label for="email">Email Address</label>
+        </div>
+
+        <div class="field">
+            <input type="password" name="pass" id="pass" required>
+        <label for="pass">Set A Password</label>
+        </div>
+
+        <input class="get-started" type="submit" value="GET STARTED">
+    </form>
+</body>
+</html>

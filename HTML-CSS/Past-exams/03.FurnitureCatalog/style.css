@@ -1,0 +1,245 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i&amp;display=swap);
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: PT Sans;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+a {
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+header {
+    background: linear-gradient(rgba(165, 163, 163, 0.3), rgba(165, 163, 163, 0.3)),
+    url(https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_1280.jpg) no-repeat center center;
+    /* filter: brightness(1.1); */
+    display: block;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+    padding: 5rem 16rem 10rem;
+    
+}
+
+header .nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6rem;
+}
+
+header .nav img {
+    width: 120px;
+    height: 120px;
+}
+
+header .nav ul {
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+header .nav ul li a {
+    color: #000;
+    font-weight: bold;
+}
+
+header .header-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+header .header-desc h1 {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+
+header .header-desc p {
+    text-align: center;
+    max-width: 80ch;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+header .header-desc p:last-of-type {
+    padding-bottom: 1.5rem;
+}
+
+header .header-desc a {
+    padding: 0.8rem 1.2rem;
+    background-color: #e7eef0;
+    color: #878788;
+    font-weight: bold;
+    border-radius: 0.3rem;
+}
+
+
+main .catalog {
+    background-color: #60acc1;
+    padding: 2.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .catalog .header {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+
+main .first-catalog .cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 15rem;
+}
+
+main .first-catalog .pages {
+    display: flex;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+    border-right: 10px solid #60acc1;
+    position: relative;
+}
+
+
+main .first-catalog .page1 {
+    width: 650px;
+    height: 380px;
+}
+
+main .first-catalog .page2 {
+    width: 650px;
+    height: 380px;
+}
+
+
+main .img-container {
+    width: 100%;
+}
+
+main .first-catalog .cards img {
+    width: 100%;
+    height: 100%;
+}
+
+main .first-catalog .cards .desc {
+    background-color: #fff;
+    padding: 2rem 2rem;
+    width: 40%;
+    position: absolute;
+    left: 60%;
+    height: 100%;
+}
+
+main .first-catalog .cards .desc h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+
+.products {
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    align-items: center;
+    align-self: baseline;
+}
+
+.products h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.second-catalog .header p {
+    font-style: italic;
+}
+
+.products p {
+    text-align: center;
+    opacity: 0.7;
+    font-size: 20px;
+}
+
+
+.products .furniture img {
+    width: 30%;
+}
+
+.products .furniture {
+    text-align: center;
+}
+
+.products .table {
+    width: 20%;
+    height: 160px;
+}
+
+
+.second-catalog img {
+    width: 25%;
+
+}
+
+.second-catalog .photos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-us {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us .header {
+    padding-bottom: 1.5rem;
+}
+
+.about-us .header p {
+    font-style: italic;
+}
+
+.about-us h2 {
+    opacity: 0.7;
+    margin-bottom: -0.4rem;
+}
+
+.about-us p {
+    opacity: 0.7;
+    max-width: 110ch;
+
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2d333c;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}

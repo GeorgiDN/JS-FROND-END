@@ -118,7 +118,7 @@ function createGameElement(name, type, players, gameId) {
         // Add game should be deactivated
         addButton.setAttribute('disabled', 'disabled');
 
-        // Set id attribute 
+        // Set id attribute
         formElement.setAttribute('data-game-id', gameId);
     });
 

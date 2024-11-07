@@ -19,6 +19,8 @@ Online judge system - https://judge.softuni.org/
 
 ➡ [05.Working with Forms](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/05-Working-with-Forms)
 
+➡ [06.Past Exams](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/Past-exams)
+
 ➡ [HTM-CSS-Commons](https://github.com/GeorgiDN/JS-FROND-END/tree/main/HTML-CSS/HTML-CSS-Commons)
 
 ### JAVASCRIPT
@@ -29,3 +31,22 @@ Online judge system - https://judge.softuni.org/
 ➡ [03.Functions and Statements](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/03-functionsAndStatements/Exercise)
 
 ➡ [04.Object and Classes](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/04-objectAndClasses)
+
+➡ [05.Dom Introduction](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/05.Dom-Introduction)
+
+➡ [06.Dom Manipulation Events](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/06.Dom-Manipulation-Events)
+
+➡ [07.HTTP and REST](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/07.HTTP-and-Rest)
+
+➡ [08.Asynchronous Programing](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/08.Asynchronous-Programming)
+
+➡ [09.HTTP and AJAX Exercise](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/09.HTTP-and-AJAX-Exercise)
+
+➡ [10.Past Exams](https://github.com/GeorgiDN/JS-FROND-END/tree/main/JAVASCRIPT/Past-exams)
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-function perfectNumber(num) {
+function isPerfectNumber(num) {
     let sumDivisors = 0;
 
     for (let i = 1; i <= num / 2; i++) {
@@ -13,7 +13,7 @@ function perfectNumber(num) {
     }
 }
 
-perfectNumber(6);
-perfectNumber(28);
-perfectNumber(496);
-perfectNumber(8128);
+isPerfectNumber(6);
+isPerfectNumber(28);
+isPerfectNumber(496);
+isPerfectNumber(8128);

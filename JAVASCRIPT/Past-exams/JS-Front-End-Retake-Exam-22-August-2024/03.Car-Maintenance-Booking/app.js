@@ -11,6 +11,49 @@ const carServiceInput = document.getElementById("car-service");
 const dateInput = document.getElementById("date");
 
 loadButton.addEventListener("click", loadCars);
+addButton.addEventListener("click", addAppointment);
+editButton.addEventListener("click", editAppointment);
+
+async function addAppointment() {
+    const model = carModelInput.value;
+    const service = carServiceInput.value;
+    const date = dateInput.value;
+
+    clearInputs();
+
+    await fetch(baseUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({model, service, date}),
+    });
+
+    await loadCars();
+}
+
+async function editAppointment() {
+    const carId = formElement.getAttribute("data-car-id");
+
+    const model = carModelInput.value;
+    const service = carServiceInput.value;
+    const date = dateInput.value;
+
+    clearInputs();
+
+    await fetch(`${baseUrl}/${carId}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({model, service, date, _id: carId}),
+    });
+    await loadCars();
+
+    editButton.setAttribute("disabled", "disabled");
+    addButton.removeAttribute("disabled");
+    formElement.removeAttribute("data-car-id");
+}
 
 async function loadCars() {
     appointmentsList.innerHTML = ""
@@ -19,7 +62,7 @@ async function loadCars() {
     const result = await response.json();
     const cars = Object.values(result);
 
-    const carElements = cars.map(car => createCarElement(car.model, car.service , car.date, car._id));
+    const carElements = cars.map(car => createCarElement(car.model, car.service, car.date, car._id));
 
     appointmentsList.append(...carElements);
 }
@@ -43,16 +86,25 @@ function createCarElement(model, service, date, carId) {
     const changeButton = document.createElement("button");
     changeButton.className = "change-btn";
     changeButton.textContent = "Change";
-    // changeButton.addEventListener("click", () => {
-    //
-    // })
+    changeButton.addEventListener("click", () => {
+        carModelInput.value = model
+        carServiceInput.value = service;
+        dateInput.value = date;
+
+        editButton.removeAttribute("disabled");
+        addButton.setAttribute("disabled", "disabled");
+        formElement.setAttribute("data-car-id", carId);
+    });
 
     const deleteButton = document.createElement("button");
     deleteButton.className = "delete-btn";
     deleteButton.textContent = "Delete";
-    // deleteButton.addEventListener("click", () => {
-    //
-    // })
+    deleteButton.addEventListener("click", async () => {
+        await fetch(`${baseUrl}/${carId}`, {
+            method: "DELETE",
+        });
+        await loadCars();
+    });
 
     const divButtons = document.createElement("div");
     divButtons.className = "buttons-appointment";
@@ -62,6 +114,10 @@ function createCarElement(model, service, date, carId) {
     liElement.appendChild(divButtons);
 
     return liElement;
+}
 
-
+function clearInputs() {
+    carModelInput.value = "";
+    carServiceInput.value = "";
+    dateInput.value = "";
 }

@@ -10,7 +10,6 @@ function solve() {
     // const deleteButton = document.querySelector("#expenses button");
     const deleteButton = document.querySelector(".btn.delete");
 
-
     addButton.addEventListener("click", createPreviewList);
     deleteButton.addEventListener("click", () => deleteInformation());
 

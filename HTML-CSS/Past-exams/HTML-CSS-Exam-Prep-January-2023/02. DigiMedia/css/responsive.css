@@ -1,0 +1,103 @@
+@media (max-width: 600px) {
+    .navbar {
+        justify-content: center;
+        margin-bottom: -180px;
+    }
+
+    .navbar-light .navbar-brand {
+        margin-right: 0px;
+        
+    }
+
+    .hero img {
+        display: none;
+    }
+
+    .container {
+        text-align: center;
+        max-width: 500px;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .hero-btns a:first-child {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .row {
+        margin-top: 30px;
+    }
+
+    .hero-btns a:last-child {
+        padding-left: 120px;
+        padding-right: 120px;
+        margin-bottom: -10px;
+    }
+
+    .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+
+    .side2-img img {
+        top: 1660px;
+        right: -20px;
+    }
+
+    .col-12 {
+        margin-bottom: 30px;
+    }
+
+    .service-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding-bottom: 120px;
+    }
+
+
+    .col-12 img {
+        margin-top: -20px;
+    }
+
+    .col-12 h5 {
+        margin-top: 30px;
+    }
+
+    .contact {
+        margin-top: -120px;
+    }
+
+    .contact .email {
+        margin-bottom: -10px;
+    }
+
+    .col-12 .message {
+       background-color: orange;
+    }
+
+
+    .col-12 .contact-btn {
+        display: none;
+    }
+
+    .contact-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer h6 {
+        padding-bottom: 10px;
+    }
+}

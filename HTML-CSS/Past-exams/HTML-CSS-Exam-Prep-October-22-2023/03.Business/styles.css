@@ -1,0 +1,221 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Serif);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+:root {
+    --light-orange: #b28561;
+    --light-gray: #adb6c8;
+    --dark-gray: #434144;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "PT Sans";
+}
+
+
+body {
+    margin: 0 auto;
+    background-color: gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Serif";
+}
+
+.page-section, p, a, button, ul, li {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+}
+
+.page-section {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+.page-section .description{
+    padding-left: 14rem;
+    padding-top: 1rem;
+}
+
+.page-section h2 {
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.page-section p {
+    padding-top: 1.2rem;
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+}
+
+.section-about {
+    display: block;
+    background: url(images/background.jpg) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+}
+
+.section-about .nav-bar .logo img {
+    width: 7rem;
+}
+
+.section-about .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.8rem 3.5rem;
+    align-items: center;
+}
+
+.section-about .nav-bar ul {
+    display: flex;
+    gap: 2.2rem;
+    align-items: flex-start;
+}
+
+.section-about .nav-bar ul li {
+    list-style-type: none;
+}
+
+.section-about .nav-bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+.section-about .description {
+    color: white;
+    width: 55%;
+}
+
+.section-about h2 {
+    font-size: 4rem;
+}
+
+.section-about p {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    padding-bottom: 18rem;
+}
+
+
+/* MORE INFO */
+
+.more-info {
+    display: flex;
+    padding: 9rem 15rem 10rem 14rem;
+    gap: 4.2rem;
+}
+
+.more-info p {
+    padding-bottom: 3rem;
+}
+
+.more-info button {
+    padding: 1rem 1.8rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--light-orange);
+    background: transparent;
+    border: 2px solid  var(--light-orange);;
+}
+
+/* Partners */
+
+.partners {
+    border-top: 2px solid lightgray;
+    text-align: center;
+    padding: 3.5rem 15.6rem;
+}
+
+.partners h2{
+    color: var(--light-orange);
+}
+
+.partners p{
+    opacity: 70%;
+}
+
+.partners .pictures {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    padding: 4rem;
+}
+
+.partners img {
+    width: 14%;
+    background-color: #ddd;
+    padding: 2rem;
+    border-radius: 50%;
+}
+
+
+/* Footer */
+
+.information {
+    background-color: black;
+    padding: 4rem 14rem;
+}
+
+
+.information .list {
+    display: flex;
+    gap: 4rem;
+}
+
+.information ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.information ul li {
+    list-style-type: none;
+    padding-bottom: 1.5rem;
+}
+
+.information ul li a {
+    text-decoration: none;
+    color: lightgray;
+    text-transform: uppercase;
+    opacity: 80%;
+    font-weight: normal;
+}
+
+.information h4 {
+    color: #fff;
+    text-align: start;
+    padding-bottom: 2.4rem;
+    font-size: 1.6rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.information .mobile-apps {
+    margin-left: 8rem;
+}
+
+footer p {
+    padding: 1rem 14rem;
+    background-color: black;
+    color: #fff;
+    color: lightgray;
+    opacity: 80%;
+    border-top: solid 0.3px rgb(110, 110, 110);
+}
+

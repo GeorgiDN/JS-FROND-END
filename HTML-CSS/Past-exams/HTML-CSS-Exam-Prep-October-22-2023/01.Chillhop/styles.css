@@ -1,0 +1,97 @@
+:root {
+    --blue: #1881b6;
+    --dark-pink: #b6416d;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Helvetica sans-serif;
+}
+
+body, select, button {
+    font: inherit;
+}
+
+body {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+}
+
+.page-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    background-color: var(--blue);
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2.5rem;
+    border: solid 4px black;
+    border-radius: 0.8rem;
+}
+
+.page-section .description{
+    width: 60%;
+    padding-top: 1.2rem;
+}
+
+.page-section .img-section{
+    width: 35%;
+}
+
+.page-section img {
+    width: 100%;
+}
+
+.page-section h2 {
+    font-size: 1.5em;
+    padding-bottom: 1.6rem;
+}
+
+.page-section h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+}
+
+.page-section h1,
+.page-section p {
+    padding-bottom: 1rem;
+}
+
+.page-section p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-indent: 2.6rem;
+}
+
+.page-section .btn-section {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 7rem;
+    margin-left: 6rem;
+}
+
+.page-section button {
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    border: solid 1.6px black;
+    font-weight: bold;
+}
+
+.page-section .contact-sales {
+    background-color: var(--dark-pink);
+    color: #fff;
+}
+
+.page-section .learn-more {
+    background-color: transparent;
+}

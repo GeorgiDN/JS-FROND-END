@@ -5,13 +5,13 @@ function solve (inputArray) {
         employeesData[employee] = employee.length;
     }
 
-    for (let [name, number] of Object.entries(employeesData)) {
+    Object.entries(employeesData).forEach(([name, number]) => {
         console.log(`Name: ${name} -- Personal Number: ${number}`);
-    }
+    })
 
-    // Object.entries(employeesData).forEach(([name, number]) => {
+    // for (let [name, number] of Object.entries(employeesData)) {
     //     console.log(`Name: ${name} -- Personal Number: ${number}`);
-    // })
+    // }
 }
 
 solve([

@@ -23,11 +23,3 @@ solve([
 '{"Microphone":"An instrument for converting sound waves into electrical energy variations which may then be amplified, transmitted, or recorded."}'
 ]
 )
-
-    //
-    // inputArray.forEach(jsonString => {
-    //     let termData = JSON.parse(jsonString); // Parse JSON string
-    //     let term = Object.keys(termData)[0]; // Get the term
-    //     let definition = termData[term]; // Get the definition
-    //     dictionary[term] = definition; // Add or update the term and definition
-    // });

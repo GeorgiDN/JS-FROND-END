@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css2?family=Playwrite+PE:wght@100..400&display=swap);
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+
+:root {
+    --blue: #314584;
+    --red: #ff3946;
+    --light-gray: #f0f0f0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Playwrite PE';
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+
+input, 
+textarea, 
+input::placeholder, 
+textarea::placeholder {
+    font-size: 20px;
+    font-family: 'Playwrite PE';
+    color: #fff;
+    background-color: var(--blue);
+    font-weight: bold;
+}
+
+a {
+    font-size: inherit;
+    font-family: 'Roboto';
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 2.1rem;
+    color: var(--blue);
+}
+
+h4 {
+    font-size: 1.1rem;
+    color: var(--red);
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    opacity: 0.8;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 3rem 1rem;
+}
+
+header ul {
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+header ul li a {
+    color: var(--blue);
+}
+
+header ul li .home {
+    color: red;
+}
+
+header .btn {
+    padding: 0.8rem 3rem;
+    background-color: var(--light-gray);
+    font-weight: bold;
+    border: 2px solid var(--red);
+    border-radius: 0.4rem;
+    color: var(--blue);
+}
+
+/* digital-agency */
+
+.digital-agency {
+    display: flex;
+    padding: 1rem 5.5rem 3rem 8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.digital-agency .image {
+    width: 60%;
+}
+
+.digital-agency img {
+    width: 100%;
+}
+
+.digital-agency .desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.digital-agency .desc h1 {
+    font-size: 78px;
+    color: var(--blue);
+    padding-bottom: 1.5rem;
+}
+
+.digital-agency .desc p {
+    padding-top: 1rem;
+    max-width: 40ch;
+    padding-bottom: 3rem;
+    opacity: 0.7;
+}
+
+.digital-agency .buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.digital-agency a {
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0 rgb(0,0,0,0.3);
+}
+
+.digital-agency .more-about {
+    background-color: var(--red);
+    color: #fff;
+    font-weight: bold;
+}
+
+.digital-agency .get-in-touch {
+    background-color: #fff;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+/* web-design */
+
+.web-design {
+    text-align: center;
+    padding: 3rem;
+    box-shadow: 0 8px 1rem 0 rgb(0,0,0,0.1);
+    margin-left: 8px;
+    width: 99%;
+    position: relative;
+
+}
+
+.web-design article {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.web-design .image {
+    width: 20%;
+    padding-bottom: 2rem;
+}
+
+.web-design .image img {
+    width: 100%;
+}
+
+.web-design p {
+    padding-top: 1rem;
+}
+
+.web-development {
+    position: relative;
+    top: 10px;
+}
+
+/* our company */
+
+.our-company {
+    text-align: center;
+    padding: 3rem;
+    position: relative;
+    top: 20px;
+
+}
+
+.our-company article {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-company .image {
+    width: 30%;
+    padding-bottom: 2rem;
+}
+
+.our-company .image img {
+    width: 100%;
+}
+
+.our-company h4 {
+    font-size: 1.1rem;
+    color: var(--red);
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+.our-company h2 {
+    font-size: 2.8rem;
+    color: var(--blue);
+}
+
+.our-company p {
+    padding-top: 1.5rem;
+    text-align: center;
+    max-width: 55ch;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.contact-us {
+    padding: 3rem 6rem 2rem;
+}
+
+.contact-us h3,
+.contact-us h4 {
+    text-align: center;
+}
+
+.contact-us h3 {
+    font-size: 2.6rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-us form input,
+.contact-us form textarea {
+    width: 100%;
+}
+
+.contact-us form input,
+.contact-us form textarea {
+    padding: 1rem;
+    border-radius: 1.2rem; 
+}
+
+.contact-us form textarea {
+    margin-top: 1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    align-items: center;
+    padding: 3.5rem;
+    gap: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+
+footer ul {
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+footer ul li a {
+    color: var(--blue);
+    color: #fff;
+}
+
+footer p {
+    font-size: 18px;
+    color: #fff;
+}
+
+
+main .bubble-container-left {
+    position: absolute;
+    top: 67%;
+    left: -120px;
+    z-index: 2;
+}
+
+main .bubble-container-right {
+    position: absolute;
+    top: 69%;
+    right: -1050px;
+    z-index: 2;
+}
+
+main .bubble {
+    width: 30%;
+}
+
+main .bubble img{
+    width: 100%;
+   
+}

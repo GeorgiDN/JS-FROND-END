@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css2?family=Margarine&display=swap);
+
+:root {
+    --white-bg: #fff0e4;
+    --white-blue: #2991e6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Margarine";
+}
+
+body {
+    background-color: var(--white-bg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 1.5rem;
+    margin: 10rem auto;
+    width: 1500px; 
+}
+
+.container .personal-info {
+    flex-grow: 1;
+    flex-basis: 500px;
+    padding: 1.5rem;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.5);
+}
+
+.personal-info h2 {
+    padding-bottom: 2rem;
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.container .personal-info ul {
+    list-style-type: none;
+    
+}
+ 
+.personal-info li {
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.personal-info ul li i {
+    color: var(--white-blue);
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 1px solid #9f9f9f;
+    padding-top: 1rem;
+}
+
+.progress span {
+    background-color: var(--white-blue);
+    text-align: center;
+    color: white;
+    border-radius: 1rem;
+    padding: 2px;
+}
+
+.ninty {
+    width: 90%;
+}
+
+.eighty {
+    width: 80%;
+}
+
+.seventy-five {
+    width: 75%;
+}
+
+.fifty {
+    width: 50%;
+}
+
+.container .experiance {
+    flex-grow: 2;
+    flex-basis: 1000px;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.5);
+    padding: 3.5rem 2rem 2rem
+}
+
+.experiance article:not(:nth-last-of-type(1)) {
+    border-bottom: 1px solid #9f9f9f;
+}
+
+.experiance h2,
+.experiance h3,
+.experiance h4 {
+    font-weight: normal;
+}
+
+.experiance h2 {
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.experiance h3 {
+    padding-top: 1.5rem;
+}
+
+.experiance h4 {
+    color: var(--white-blue);
+} 
+
+.experiance article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.experiance p {
+    padding-bottom: 1rem;
+}

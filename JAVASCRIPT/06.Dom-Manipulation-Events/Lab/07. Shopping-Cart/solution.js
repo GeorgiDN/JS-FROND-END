@@ -28,13 +28,9 @@ function solve() {
     }
 
     function takeTheBill() {
-        const productsNameList = [];
-        let totalPrice = 0;
-        Object.entries(productsData).forEach(([name, price]) => {
-            productsNameList.push(name);
-            totalPrice += price;
-        });
-        textAreaEl.textContent += `You bought ${productsNameList.join(", ")} for ${totalPrice.toFixed(2)}.`
+        const productsNameList = Object.keys(productsData);
+        const totalPrice = Object.values(productsData).reduce((sum, price) => sum + price, 0);
+        textAreaEl.textContent += `You bought ${productsNameList.join(", ")} for ${totalPrice.toFixed(2)}.`;
         disableButtons(allButtons);
     }
 
@@ -44,6 +40,58 @@ function solve() {
         });
     }
 }
+
+
+
+
+// function solve() {
+//     const allButtons = document.querySelectorAll("button");
+//     const allAddButtons = document.querySelectorAll(".add-product");
+//     const textAreaEl = document.getElementsByTagName("textarea")[0];
+//     const checkButton = document.querySelector(".checkout");
+//     let productsData = {};
+//     allAddButtons.forEach((addButton) => {
+//         let productDetails =  addButton.parentElement.previousElementSibling;
+//         let productName = productDetails.children[0].textContent;
+//         let productPrice =  Number(addButton.parentElement.nextElementSibling.textContent);
+//         addButton.addEventListener("click", () => {
+//             addProduct(productName, productPrice)
+//         });
+//     });
+//
+//     checkButton.addEventListener("click", takeTheBill);
+//
+//     function addProduct(productName, productPrice) {
+//         textAreaEl.textContent += `Added ${productName} for ${productPrice.toFixed(2)} to the cart.\n`;
+//         saveProductData(productName, productPrice);
+//     }
+//
+//     function saveProductData(productName, productPrice) {
+//         if (!productsData.hasOwnProperty(productName)) {
+//             productsData[productName] = 0;
+//         }
+//         productsData[productName] += productPrice;
+//     }
+//
+//     function takeTheBill() {
+//         const productsNameList = [];
+//         let totalPrice = 0;
+//         Object.entries(productsData).forEach(([name, price]) => {
+//             productsNameList.push(name);
+//             totalPrice += price;
+//         });
+//         textAreaEl.textContent += `You bought ${productsNameList.join(", ")} for ${totalPrice.toFixed(2)}.`
+//         disableButtons(allButtons);
+//     }
+//
+//     function disableButtons(allButtons) {
+//         allButtons.forEach((btn) => {
+//             btn.setAttribute("disabled", "disabled");
+//         });
+//     }
+// }
+
+
 
 
 // function solve() {

@@ -1,0 +1,248 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i&amp;display=swap);
+
+:root{
+    --light-blue: #60acc1;
+    --ligh-gray:#878585;
+    --dark-gray:#2d333c
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+html {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+}
+
+body {
+    margin: 0 auto;
+}
+
+section, p {
+    font: inherit
+}
+
+section {
+    width: 100%;
+    height: auto;
+}
+
+.home {
+    display: block;
+    background: url('images/background.jpg') center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+}
+
+.home .nav-bar .logo img{
+    width: 6em;
+    height: auto;
+}
+
+.home .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3em 16em;
+    align-items: center;
+}
+
+.home .nav-bar ul li {
+    list-style-type: none;
+}
+
+.home .nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.home .nav-info ul{
+    display: flex;
+    gap: 1.4em;
+}
+
+.home .header {
+    padding: 12em;
+    position: relative;
+    bottom: 3em;
+}
+
+.header {
+    text-align: center;
+}
+
+.home .title {
+    font-size: 2.6em;
+    padding-bottom: 1.6rem ;
+}
+
+.home .header p {
+    font-weight: bold;
+}
+
+.home .header button {
+    margin-top: 2.2rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 2px;
+    color: rgb(104, 103, 103)
+}
+
+
+/* CATALOG */
+
+.catalog {
+    background-color: var(--light-blue);
+}
+
+.catalog .header {
+    padding-top: 2.8rem;
+}
+
+.catalog .title {
+    margin-bottom: 0.3rem;
+}
+
+.catalog .pages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2.2rem 6rem;
+    overflow: hidden;
+    
+}
+
+.catalog-first .card {
+    display: flex;
+    flex-direction: row;
+    width: 42%; 
+    height: 17em;
+    background-color: #fff;
+    margin-bottom: 3.2rem;
+    border-radius: 2px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);  
+}
+
+.catalog-first .card {
+    border-right: solid 6px var(--light-blue);
+}
+
+.catalog-first .card img {
+    width: 50%; 
+    height: auto;
+}
+
+.catalog-first .card .content {
+    width: 50%;
+}
+
+.catalog-first .content {
+    text-align: center;
+    padding: 2.8rem 2.3rem;
+}
+
+.catalog .content h2{
+    margin-bottom: 1rem;
+}
+
+
+/* FURNITURE */
+
+
+.furniture  .pages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    overflow: hidden;
+}
+
+.furniture .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%; 
+    background-color: #fff;
+    align-items: center;
+    overflow: hidden;
+    border: none;
+}
+
+
+.furniture .card img {
+    width: 35%; 
+    height: 35%;
+}
+
+.furniture .card .content {
+    width: 100%;
+}
+
+.furniture .content {
+    text-align: center;
+    padding: 1rem;
+}
+
+.furniture .content h2{
+    margin-bottom: 1rem;
+}
+
+
+
+/* SECOND CATALOG */
+
+.catalog-second .pages {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 6rem 0rem 6rem;
+    padding: 2.5rem;
+}
+
+.catalog-second .card {
+    width: 29%;
+    background-color: #fff;
+    border-radius: 2px; 
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-second .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+}
+
+
+/* ABOUT */
+.about {
+    text-align: center;
+    padding: 2em 22em;
+    color: var(--ligh-gray);
+    
+}
+
+.about .header {
+    margin-bottom: 1.5em;
+}
+
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    background-color: var(--dark-gray);
+    color: rgb(217, 216, 216);
+    padding: 0.8em;
+}

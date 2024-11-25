@@ -15,12 +15,10 @@ function create(words) {
         divEl.addEventListener("click", (event) => {
             event.target.querySelector("p").style.display = "block";
 
-    });
+        });
         contentDivEl.appendChild(divEl);
-}}
-
-
-
+    }
+}
 
 
 // function create(words) {

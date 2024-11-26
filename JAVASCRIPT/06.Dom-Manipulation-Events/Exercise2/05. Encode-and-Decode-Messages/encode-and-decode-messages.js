@@ -1,38 +1,45 @@
 document.addEventListener('DOMContentLoaded', solve);
 
-
 function solve() {
-    const message = document.querySelector("#encode textarea");
+    const messageForEncode = document.querySelector("#encode textarea");
     const encodeButton = document.querySelector("#encode button");
     const lastReceivedMessage = document.querySelector("#decode textarea")
     const decodeButton = document.querySelector("#decode button");
 
     encodeButton.addEventListener("click", (e) => {
         e.preventDefault();
-        if (!message.value) {
-            return;
-        }
-        let encodedMessage = message.value
-            .split("")
-            .map(ch => String.fromCharCode(ch.charCodeAt(0) + 1))
-            .join("");
-
-        message.value = "";
-        lastReceivedMessage.value = encodedMessage;
+        encodeMessage();
     });
 
     decodeButton.addEventListener("click", (e) => {
         e.preventDefault();
+        decodeMessage();
+    });
+
+    function encodeMessage() {
+        if (!messageForEncode.value) {
+            return;
+        }
+        let encodedMessage = messageForEncode.value
+            .split("")
+            .map(ch => String.fromCharCode(ch.charCodeAt(0) + 1))
+            .join("");
+
+        messageForEncode.value = "";
+        lastReceivedMessage.value = encodedMessage;
+    }
+
+    function decodeMessage() {
         if (!lastReceivedMessage.value) {
             return;
         }
-        let decodedMessage =  lastReceivedMessage.value
+        let decodedMessageText = lastReceivedMessage.value
             .split("")
             .map(ch => String.fromCharCode(ch.charCodeAt(0) - 1))
             .join("");
 
-        lastReceivedMessage.value = decodedMessage;
-    });
+        lastReceivedMessage.value = decodedMessageText;
+    }
 }
 
 

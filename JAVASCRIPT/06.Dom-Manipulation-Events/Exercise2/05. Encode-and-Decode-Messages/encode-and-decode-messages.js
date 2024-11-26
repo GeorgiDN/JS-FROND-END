@@ -44,6 +44,51 @@ function solve() {
 
 
 
+// document.addEventListener('DOMContentLoaded', solve);
+//
+// function solve() {
+//     const messageForEncode = document.querySelector("#encode textarea");
+//     const encodeButton = document.querySelector("#encode button");
+//     const lastReceivedMessage = document.querySelector("#decode textarea");
+//     const decodeButton = document.querySelector("#decode button");
+//
+//     encodeButton.addEventListener("click", (e) => {
+//         e.preventDefault();
+//         transformMessage("encode");
+//     });
+//
+//     decodeButton.addEventListener("click", (e) => {
+//         e.preventDefault();
+//         transformMessage("decode");
+//     });
+//
+//     function transformMessage(action) {
+//         const sourceText = action === "encode" ? messageForEncode.value : lastReceivedMessage.value;
+//         if (!sourceText) {
+//             return;
+//         }
+//
+//         const transformedMessage = sourceText
+//             .split("")
+//             .map(ch =>
+//                 action === "encode"
+//                 ? String.fromCharCode(ch.charCodeAt(0) + 1)
+//                 : String.fromCharCode(ch.charCodeAt(0) - 1)
+//             )
+//             .join("");
+//
+//         if (action === "encode") {
+//             messageForEncode.value = "";
+//             lastReceivedMessage.value = transformedMessage;
+//         } else {
+//             lastReceivedMessage.value = transformedMessage;
+//         }
+//     }
+// }
+
+
+
+
 // function solve() {
 //     const message = document.querySelector("#encode textarea");
 //     const encodeButton = document.querySelector("#encode button");

@@ -1,13 +1,13 @@
 function solve() {
-    const textBox = document.querySelector("#info span");
-    const departBtn = document.getElementById("depart");
-    const arriveBtn = document.getElementById("arrive");
-    const baseUrl = "http://localhost:3030/jsonstore/bus/schedule";
+    const info = document.querySelector("#info span");
+    const departButton = document.querySelector("#depart");
+    const arriveButton = document.querySelector("#arrive");
+    const baseUrl = "http://localhost:3030/jsonstore/bus/schedule"
 
     let currentStop = {
         id: "depot",
         name: "Not Connected"
-    };
+    }
 
     async function depart() {
         try {
@@ -15,24 +15,23 @@ function solve() {
             const data = await response.json();
 
             currentStop = data;
-            console.log(currentStop)
-            textBox.textContent = `Next stop ${currentStop.name}`
+            let nextStop = currentStop.name;
+            info.textContent = `Next stop ${nextStop}`;
+            departButton.setAttribute("disabled", "disabled");
+            arriveButton.removeAttribute("disabled");
 
-            departBtn.disabled = true;
-            arriveBtn.disabled = false;
-        } catch (error) {
-            textBox.textContent = "Error";
-            departBtn.disabled = true;
-            arriveBtn.disabled = true;
+        } catch (_) {
+            info.textContent = "Érror";
+            arriveButton.setAttribute("disabled", "disabled");
+            departButton.setAttribute("disabled", "disabled");
         }
     }
 
     function arrive() {
-        textBox.textContent = `Arriving at ${currentStop.name}`;
-
+        info.textContent = `Arriving at ${currentStop.name}`
         currentStop.id = currentStop.next;
-        departBtn.disabled = false;
-        arriveBtn.disabled = true;
+        arriveButton.setAttribute("disabled", "disabled");
+        departButton.removeAttribute("disabled");
     }
 
     return {
@@ -42,3 +41,4 @@ function solve() {
 }
 
 let result = solve();
+

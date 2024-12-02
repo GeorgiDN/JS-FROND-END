@@ -1,117 +1,61 @@
 function attachEvents() {
-    const postsURL = 'http://localhost:3030/jsonstore/blog/posts';
-    const commentsURL = 'http://localhost:3030/jsonstore/blog/comments';
+    const postsUrl =  "http://localhost:3030/jsonstore/blog/posts";
+    const commentsUrl = "http://localhost:3030/jsonstore/blog/comments";
+    const loadPostsButton = takeElementByTag("#btnLoadPosts");
+    const viewsButton = takeElementByTag("#btnViewPost");
+    const selectPostsEl = takeElementByTag("#posts");
+    const commentsList = takeElementByTag("#post-comments");
+    const postTitle = takeElementByTag("#post-title");
+    const postBody = takeElementByTag("#post-body");
 
-    let loadPostsButton = document.getElementById('btnLoadPosts');
-    loadPostsButton.addEventListener('click', loadPostsEvent);
+    loadPostsButton.addEventListener("click", loadPosts);
+    viewsButton.addEventListener("click", getData);
 
-    let postsSelect = document.getElementById('posts');
+    let postDetails = {};
 
-    let viewPostButton = document.getElementById('btnViewPost');
-    viewPostButton.addEventListener('click', viewPostEvent);
+    async function loadPosts() {
+        const allPostResponse = await fetch(postsUrl);
+        const allPosts = await allPostResponse.json();
 
-    let allPosts = {};
-
-    async function loadPostsEvent(event) {
-        postsSelect.innerHTML = '';
-
-        let allPostsResponse = await fetch(postsURL);
-        allPosts = await allPostsResponse.json();
-
-        for (let postArr of Object.entries(allPosts)) {
-            let option = document.createElement('option');
-            option.textContent = postArr[1].title;
-            option.value = postArr[0];
-            postsSelect.appendChild(option);
-        }
+        Object.entries(allPosts).forEach(([objectKey, post]) => {
+            postDetails[post.id] = {};
+            postDetails[post.id]["title"] = post.title;
+            postDetails[post.id]["body"] = post.body;
+            const optionEl = createEl("option");
+            optionEl.value = post.id;
+            optionEl.textContent = post.title;
+            selectPostsEl.appendChild(optionEl);
+        });
     }
 
-    async function viewPostEvent(event) {
-        let currentPostId = postsSelect.value;
-        let currentPostComments = [];
+    async function getData() {
+        commentsList.innerHTML = "";
 
-        let allCommentsResponse = await fetch(commentsURL);
-        let allComments = await allCommentsResponse.json();
+        const selectedPostId = selectPostsEl.value;
 
-        for (let commentArr of Object.entries(allComments)) {
-            if (commentArr[1].postId === currentPostId) {
-                currentPostComments.push(commentArr[1].text);
+        const allCommentsResponse = await fetch(commentsUrl);
+        const postData = await allCommentsResponse.json();
+
+        postTitle.textContent = postDetails[selectedPostId]["title"];
+        postBody.textContent = postDetails[selectedPostId]["body"];
+
+        Object.values(postData).forEach((post) => {
+            if (selectPostsEl.value === post.postId) {
+                const liElement = createEl("li");
+                liElement.id = post.postId;
+                liElement.textContent = post.text;
+                commentsList.appendChild(liElement);
             }
-        }
+        });
+    }
 
-        let chosenPost = allPosts[currentPostId];
+    function takeElementByTag(tag) {
+        return document.querySelector(tag);
+    }
 
-        document.getElementById('post-title').textContent = chosenPost.title;
-        document.getElementById('post-body').textContent = chosenPost.body;
-
-        let ul = document.getElementById('post-comments');
-        ul.innerHTML = '';
-        for (let comment of currentPostComments) {
-            let li = document.createElement('li');
-            li.textContent = comment;
-            ul.appendChild(li);
-        }
+    function createEl(tag) {
+        return document.createElement(tag);
     }
 }
 
 attachEvents();
-
-
-
-
-
-
-// 50/100
-// function attachEvents() {
-//     const postUrl = "http://localhost:3030/jsonstore/blog/posts" ;
-//     const commentsUrl = " http://localhost:3030/jsonstore/blog/comments";
-//
-//     let loadBtn = document.getElementById("btnLoadPosts");
-//     let viewPostBtn = document.getElementById("btnViewPost");
-//     let postSelect = document.getElementById("posts");
-//     let postTitleElement = document.getElementById("post-title");
-//     let commentsList = document.getElementById("post-comments");
-//     let postBodyElement = document.getElementById("post-body");
-//
-//     loadBtn.addEventListener("click", () => {
-//         postSelect.innerHTML = "";
-//
-//         fetch(postUrl)
-//             .then(response => response.json())
-//             .then(data => {
-//                 Object.values(data)
-//                     .forEach(post => {
-//                         let optionElement = document.createElement("option");
-//                         optionElement.value = post.id;
-//                         optionElement.textContent = post.title;
-//                         postSelect.appendChild(optionElement)
-//                     });
-//             });
-//     });
-//
-//     viewPostBtn.addEventListener("click", async () => {
-//         let selectedPostId = postSelect.value;
-//         let postResponse = await fetch(`${postUrl}/${selectedPostId}`);
-//         let selectedPost = await postResponse.json();
-//         postTitleElement.textContent = selectedPost.title;
-//
-//         let commentsResponse = await fetch(`${commentsUrl}`);
-//         let comments = await commentsResponse.json();
-//         postBodyElement.textContent = selectedPost.body;
-//
-//         Object.values(comments)
-//             .forEach(commentObject => {
-//                 if (selectedPostId === commentObject.postId) {
-//                     let liElement = document.createElement("li");
-//                     liElement.textContent = commentObject.text;
-//                     commentsList.appendChild(liElement)
-//                 }
-//             });
-//
-//     });
-//
-// }
-//
-// attachEvents();
-
-

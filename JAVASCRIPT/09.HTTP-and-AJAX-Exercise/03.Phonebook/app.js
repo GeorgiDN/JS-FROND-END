@@ -1,58 +1,69 @@
 function attachEvents() {
     const baseUrl = "http://localhost:3030/jsonstore/phonebook";
-    const phoneBookElement = document.getElementById("phonebook");
-    const loadBtnElement = document.getElementById("btnLoad");
-    const createBtnElement = document.getElementById("btnCreate");
-    const personInputElement = document.getElementById("person");
-    const phoneInputElement = document.getElementById("phone");
+    const personInput = takeElementByTag("#person");
+    const phoneInput = takeElementByTag("#phone");
+    const phoneBookList = takeElementByTag("#phonebook");
+    const loadButton = takeElementByTag("#btnLoad");
+    const createButton = takeElementByTag("#btnCreate");
 
-    loadBtnElement.addEventListener("click", loadContact);
+    loadButton.addEventListener("click", loadPhoneNumbers);
+    createButton.addEventListener("click", createContact);
 
-    createBtnElement.addEventListener("click", () => {
-        createContact(personInputElement.value, phoneInputElement.value);
-        personInputElement.value = ""
-        phoneInputElement.value = ""
-    });
+    async function createContact() {
+        const person = personInput.value;
+        const phone = phoneInput.value;
 
-    async function createContact(person, phone) {
-        fetch(baseUrl, {
+        await fetch(baseUrl, {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({
-                person,
-                phone
-            })
-        })
-        await loadContact()
+            headers:{
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({person, phone})
+        });
+
+        clearInputs(personInput, phoneInput);
+
+        await loadPhoneNumbers();
     }
 
-    async function loadContact (event) {
-        phoneBookElement.textContent = ""
+    async function loadPhoneNumbers(){
+        phoneBookList.innerHTML = "";
 
-        let response = await fetch(baseUrl);
-        let data = await response.json();
-
-        Object.values(data).forEach(obj => {
-            let liElement = document.createElement("li");
-            let phoneData = `${obj.person}: ${obj.phone}`;
-            liElement.textContent = phoneData;
-
-            let deleteButton = document.createElement("button");
+        const response = await fetch(baseUrl);
+        const result = await response.json();
+        Object.values(result).forEach(record => {
+            const liElement = createEl("li");
+            liElement.textContent = `${record.person}: ${record.phone}`;
+            const deleteButton = createEl("button");
             deleteButton.textContent = "Delete";
+
             deleteButton.addEventListener("click", () => {
-                deleteContact(obj._id, liElement)
-            })
+                deleteContact(record._id, liElement)
+            });
 
             liElement.appendChild(deleteButton);
-            phoneBookElement.appendChild(liElement);
+            phoneBookList.appendChild(liElement);
         });
     }
 
-    async function deleteContact(id, liElement) {
-        await fetch(`${baseUrl}/${id}`, {
+    async function deleteContact(recordId, liElement) {
+        await fetch(`${baseUrl}/${recordId}`,{
             method: "DELETE",
-        })
+            })
         liElement.remove();
+    }
+
+    function takeElementByTag(tag) {
+        return document.querySelector(tag);
+    }
+
+    function createEl(tag) {
+        return document.createElement(tag);
+    }
+
+    function clearInputs(field1, field2) {
+        field1.value = "";
+        field2.value = "";
     }
 }
 

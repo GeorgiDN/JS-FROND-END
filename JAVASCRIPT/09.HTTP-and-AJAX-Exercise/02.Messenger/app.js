@@ -1,42 +1,52 @@
 function attachEvents() {
-    const textAreaElement = document.getElementById("messages");
-    const nameInputElement = document.querySelector("#main #controls div:first-of-type input");
-    const messageInputElement = document.querySelector("#main #controls div:last-of-type input");
     const baseUrl = "http://localhost:3030/jsonstore/messenger";
-    const submitBtnElement = document.getElementById("submit");
-    const refreshBtnElement = document.getElementById("refresh");
+    const textAreaEl = takeElementByTag("#messages");
+    const nameInput = takeElementByTag("#controls input[name='author']")
+    const messageInput = takeElementByTag("#controls input[name='content']")
+    const sendButton = takeElementByTag("#submit");
+    const refreshButton = takeElementByTag("#refresh");
 
-    let messageData = {};
+    refreshButton.addEventListener("click", loadMessages);
+    sendButton.addEventListener("click", addMessage);
 
-    submitBtnElement.addEventListener("click", () => {
-        messageData = sendMessage(nameInputElement.value, messageInputElement.value)
-        fetch(baseUrl, {
+    async function addMessage() {
+
+        const author = nameInput.value;
+        const content = messageInput.value;
+
+        await fetch(baseUrl, {
             method: "POST",
-            body: JSON.stringify(messageData)
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({author, content})
         });
-    });
 
-    refreshBtnElement.addEventListener("click", refreshEvent)
-
-   function sendMessage(author, content) {
-        return { author, content };
+        clearInputs(nameInput, messageInput);
     }
 
-    async function refreshEvent (event) {
-        textAreaElement.textContent = "";
+    async function loadMessages() {
+        textAreaEl.textContent = "";
 
-        let messageResponse = await fetch(baseUrl);
-        let messages = await messageResponse.json();
+        const messageResponse = await fetch(baseUrl);
+        const messagesData = await messageResponse.json();
+        const messages = Object.values(messagesData)
+            .map(message => `${message.author}: ${message.content}`)
+            .join("\n");
+        textAreaEl.textContent = messages;
+    }
 
-        let resultArray = [];
+    function takeElementByTag(tag) {
+        return document.querySelector(tag);
+    }
 
-        Object.values(messages)
-            .forEach(m => {
-                let author = m.author;
-                let content = m.content;
-                resultArray.push(`${author}: ${content}`);
-            })
-        textAreaElement.textContent = resultArray.join("\n");
+    function createEl(tag) {
+        return document.createElement(tag);
+    }
+
+    function clearInputs(field1, field2) {
+        field1.value = "";
+        field2.value = "";
     }
 }
 

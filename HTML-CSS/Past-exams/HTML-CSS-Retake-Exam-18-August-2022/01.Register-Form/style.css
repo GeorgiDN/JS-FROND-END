@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css2?family=Mulish&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Mulish";
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+body {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+    background: url(images/background.png) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+a {
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    width: 800px;
+    box-shadow: 1rem 1rem 1rem 0.3rem rgb(0,0,0,0.4);
+    display: block;
+    background: url(images/form-background.png) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+    padding: 6rem 3rem 3rem;
+    border-radius: 2.4rem;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+
+}
+
+.container form label {
+    margin-top: 0.8rem;
+    opacity: 0.6;
+}
+
+.container form input {
+    margin-top: 0.6rem;
+    padding: 0.9rem;
+    border: none;
+    border: 1.6px solid lightgrey;
+    border-radius: 1.6rem;
+}
+
+form .names {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .first-name-container,
+form .last-name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container form h1 {
+    padding-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.8;
+    font-size: 1.6rem;
+}
+
+form .check {
+    margin-top: 0.8rem;
+}
+
+
+form .register-now {
+    align-self: center;
+    padding: 0.8rem 1.8rem;
+    background-color: #ae3c33;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 1.8rem;
+    border-radius: 1.8rem;
+}

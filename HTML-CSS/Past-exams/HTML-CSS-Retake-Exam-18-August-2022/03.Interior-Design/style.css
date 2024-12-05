@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+
+:root {
+    --brown: #a29891;
+    --gray: #cac7c6;
+    --dark-brown: #686463;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Abril Fatface', cursive;
+}
+
+
+body {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: 0rem auto;
+}
+
+a {
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+header {
+    position: relative;
+    display: block;
+    background: url(image/image.jpg) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+    width: 1200px;
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-left: 4rem;
+}
+
+
+header .interior-design {
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.2rem rgb(0,0,0,0.6);
+    padding: 2rem 1rem;
+    width: 250px;
+    height: 220px;
+    line-height: 1.5;
+}
+
+header .interior-design h2 {
+    font-size: 2.4rem;
+    padding-bottom: 0.2rem;
+}
+
+header .interior-design .sep {
+    display: block;
+    width: 140px;
+    height: 2px;
+    background-color: #fff;
+}
+
+header .interior-design p {
+    padding-top: 0.5rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+
+
+.header-content .intro {
+    max-width: 320px;
+    margin-top: 15rem;
+    margin-bottom: 19rem;
+    color: #fff;
+    background: linear-gradient(to right, var(--brown), var(--gray));
+    padding: 3.8rem 1rem 1.8rem; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 1rem 0 rgb(0,0,0,0.6);
+
+}
+
+.header-content .intro .quotes p {
+    font-size: 4rem;
+    color: var(--dark-brown);
+    line-height: 0.2;
+    position: relative;
+    left: 8rem;
+}
+
+.header-content .intro p {
+    align-self: flex-end;
+    text-indent: 3ch;
+
+}
+
+/* main */
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-contacts {
+    flex-basis: 70%;
+    background-color: #f2f0f3;
+}
+
+.services-contacts article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem 0rem 1.5rem 3rem; 
+}
+
+.services-contacts article ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.services-contacts article ul li {
+    max-width: 88%;
+}
+
+.services-contacts article ul li .serices-content {
+    opacity: 0.8;
+}
+
+.services-contacts article ul li .services-header {
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.services-contacts h2 {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+}
+
+.services-contacts .contacts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-contacts .contacts .row {
+    display: flex;
+    gap: 1.1rem;
+
+}
+
+.services-contacts .contacts .row span {
+    font-weight: bold;
+}
+
+.services-contacts .contacts .row1 {
+    padding-top: 1rem;
+}
+
+.services-contacts .contacts .row2 {
+    padding-top: -1.5rem;
+}
+
+.services-contacts .separator {
+    display: block;
+    width: 500px;
+    height: 2px;
+    background-color: var(--brown);
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    width: 100%;
+}
+
+.services-contacts form {
+    display: flex;
+    gap: 1rem;
+}
+
+.services-contacts form input,
+.services-contacts form button {
+    border: none;
+    padding: 1rem 1.6rem;
+    border-radius: 0.4rem;
+}
+
+.services-contacts form input {
+    padding-right: 7rem;
+    background-color: #bab1ad;
+    color: #fff;
+}
+
+.services-contacts form input, 
+textarea, 
+input::placeholder, 
+textarea::placeholder {
+    font-family: inherit;
+    color: #fff;
+}
+
+.services-contacts form button {
+    background-color: #67784d;
+    color: #fff;
+}
+
+
+.aside {
+    flex-basis: 30%;
+    background-color: #bab1ad;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside .number {
+    font-size: 3.8rem;
+    font-weight: 200;
+    color: #fff;
+}
+
+.aside .desc{
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-weight: 200;
+    font-family: "Roboto";
+}

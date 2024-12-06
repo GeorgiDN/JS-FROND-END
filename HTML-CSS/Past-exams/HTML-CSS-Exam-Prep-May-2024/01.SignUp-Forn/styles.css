@@ -1,118 +1,158 @@
+@import url(https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap);
+
+:root {
+    --black: #24333c;
+    --green: #1ab188;
+    --gray: #435359;
+    --dark-green: #179a77;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-
-:root {
-    --gray-light: #c1bdba;
-    --gray-black: #24333c;
-    --light-green:#1ab188;
-    --dark-green: #179a77;
-    --gray: #646c70;
-    --middle-gray:#435359;
-}
-
-html, body, input, button, textarea {
-    font-family: "Kode Mono";
+html {
+    font-family: Kode Mono;
+    line-height: 1.4;
     font-size: 18px;
 }
 
 body {
-    background-color: #c1bdba;
-}
-
-.register-form {
-    background-color: var(--gray-black);
-    width: 700px;
-    color: white;
-    border-radius: 3px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-}
-
-.navigation {
+    background-color: #fff;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
 }
 
-.navigation li {
-    flex: 1 1 auto;
-    display: block;
-    list-style: none;
-}
-
-.navigation a {
-    display: block;
-    color: inherit;
+a {
+    font-size: inherit;
+    font-family: inherit;
     text-decoration: none;
-    padding: 1rem;
-    background-color: var(--light-green);
-    text-align: center;   
 }
 
-.register-form .log-in {
-    background-color: var(--middle-gray);
+li {
+    list-style-type: none;
 }
 
-.log-in:hover {
+.sign-up-form {
+    width: 600px;
+    background-color: var(--black);
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    border-radius: 0.3rem;
+}
+
+.sign-up-form header {
+    display: flex;
+    padding-bottom: 2rem;
+}
+
+.sign-up-form header a {
+    padding: 1rem 1.4rem;
+    justify-content: space-between;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.sign-up-form header .sign-up {
+    background-color: var(--green);
+    color: #fff;
+}
+
+.sign-up-form header .log-in {
+    background-color: var(--gray);
+    color: #fff;
+    opacity: 0.6;
+}
+
+.sign-up-form header .log-in:hover {
     background-color: var(--dark-green);
 }
 
-form .title {
-    text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    letter-spacing: 1px;
+.sign-up-form main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
-.field {
+.sign-up-form main h3{
+    text-align: center;
+    padding-bottom: 1rem;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.sign-up-form main .field {
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
-.register-form input {
-    display: block;
-    width: 100%;
+.sign-up-form main input {
     background-color: transparent;
-    border: 1px solid var(--gray);
-    padding: 0.3rem 0.5rem;
-    outline: none;
-    margin-bottom: 2rem;
+    position: relative;
+    padding: 0.5rem;
+    border: none;
+    border: 1px solid #a6a6a6;
 }
 
-.register-form .names {
-    display: flex;
-    gap: 10px;
-}
-
-.names .field {
-    flex-basis: 50%;
-}
-
-.field label {
-    display: block;
+.sign-up-form main label {
     position: absolute;
-    top: 0;
-    left: 2px;
-    padding: 0.3rem 0.5rem;
-    color: var(--gray);
+    opacity: 0.6;
+    top: 8px;
+    left: 10px;
+    transition: all 0.2s ease;
 }
 
-.field input:required ~ label::after {
+.sign-up-form main input:focus ~ label,
+.sign-up-form main input:valid ~ label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+}
+
+.sign-up-form main .names {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.sign-up-form main .names .field {
+    flex-grow: 1;
+}
+
+.sign-up-form .field input:required ~ label::after {
     display: inline-block;
     content: "*";
-    color: var(--dark-green);
+    color: rgb(12, 170, 12);
     padding: 0.1rem ;
 }
 
-form input[type="submit"] {
-    display: block;
-    background: var(--light-green);
-    color: white;
-    border: none;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    margin-bottom: 0.8rem;
-    letter-spacing: 2px;
+
+.sign-up-form footer {
+    display: flex;
 }
+
+.sign-up-form footer button {
+    background-color: var(--green);
+    color: #fff;
+    padding: 0.8rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
 

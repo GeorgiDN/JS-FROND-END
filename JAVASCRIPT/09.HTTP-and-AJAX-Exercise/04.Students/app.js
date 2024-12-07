@@ -1,147 +1,101 @@
 function attachEvents() {
     const baseUrl = "http://localhost:3030/jsonstore/collections/students";
-    const studentsTbodyElement = document.querySelector("#results tbody");
-    const submitElement = document.getElementById("submit");
+    const firstNameInput = takeElementByTag(".container-form .inputs input[name='firstName']");
+    const lastNameInput = takeElementByTag(".container-form .inputs input[name='lastName']");
+    const facultyNumberInput = takeElementByTag(".container-form .inputs input[name='facultyNumber']");
+    const gradeInput = takeElementByTag(".container-form .inputs input[name='grade']");
+    const tBodyElement = takeElementByTag("#results tbody");
+    const submitButton = takeElementByTag("#submit");
 
-    submitElement.addEventListener("click", async () => {
-        const firstNameElement = document.querySelector("input[name=firstName]");
-        const lastNameElement = document.querySelector("input[name=lastName]");
-        const facultyNumberElement = document.querySelector("input[name=facultyNumber]");
-        const gradeElement = document.querySelector("input[name=grade]");
+    submitButton.addEventListener("click", saveRecord);
 
-        const newStudent = {
-            firstName: firstNameElement.value,
-            lastName: lastNameElement.value,
-            facultyNumber: facultyNumberElement.value,
-            grade: gradeElement.value,
-        };
-
-        try {
-            const response = await fetch(baseUrl, {
-                method: "POST",
-                headers: {
-                    "content-type": "application/json",
-                },
-                body: JSON.stringify(newStudent),
-            });
-
-            const data = await response.json();
-            studentsTbodyElement.appendChild(createStudentElement(data));
-
-            firstNameElement.value = "";
-            lastNameElement.value = "";
-            facultyNumberElement.value = "";
-            gradeElement.value = "";
-
-        } catch (error) {
-            console.error("Error creating student:", error);
-        }
-    });
-
-    async function loadStudents() {
+    async function loadRecords() {
         try {
             const response = await fetch(baseUrl);
-            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(`HTTP error: ${response.status} - ${response.statusText}`);
+            }
 
-            Object.values(data).forEach(student =>
-                studentsTbodyElement.appendChild(createStudentElement(student))
+            const result = await response.json();
+            const students = Object.values(result);
+
+            tBodyElement.innerHTML = "";
+
+            const recordsElements = students.map(student =>
+                createRecord(student.firstName, student.lastName, student.facultyNumber, student.grade)
             );
+
+            tBodyElement.append(...recordsElements);
         } catch (error) {
-            console.error("Error loading students:", error);
+            console.error("Error loading records", error);
         }
     }
 
-    function createStudentElement(student) {
-        const trElement = document.createElement("tr");
+    function createRecord(firstName, lastName, facultyNumber, grade) {
+        const tdFirstNameElement = createEl("td");
+        tdFirstNameElement.textContent = firstName;
 
-        const createTd = value => {
-            const tdElement = document.createElement("td");
-            tdElement.textContent = value;
-            return tdElement;
-        };
+        const tdLastNameElement = createEl("td");
+        tdLastNameElement.textContent = lastName;
 
-        trElement.appendChild(createTd(student.firstName));
-        trElement.appendChild(createTd(student.lastName));
-        trElement.appendChild(createTd(student.facultyNumber));
-        trElement.appendChild(createTd(student.grade));
+        const tdLFacultyNumberElement = createEl("td");
+        tdLFacultyNumberElement.textContent = facultyNumber;
+
+        const tdGradeElement = createEl("td");
+        tdGradeElement.textContent = grade;
+
+        const trElement = createEl("tr");
+        trElement.appendChild(tdFirstNameElement);
+        trElement.appendChild(tdLastNameElement);
+        trElement.appendChild(tdLFacultyNumberElement);
+        trElement.appendChild(tdGradeElement);
 
         return trElement;
     }
 
-    loadStudents();
+    async function saveRecord() {
+
+        if (!firstNameInput.value || !lastNameInput.value || !facultyNumberInput.value || !gradeInput.value) {
+            return;
+        }
+
+        try {
+            const firstName = firstNameInput.value;
+            const lastName = lastNameInput.value;
+            const facultyNumber = facultyNumberInput.value;
+            const grade = gradeInput.value;
+
+            await fetch(baseUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({firstName, lastName, facultyNumber, grade})
+            });
+
+            clearInputs();
+            await loadRecords();
+
+        } catch (error) {
+            console.log("Error to during save the records", error);
+        }
+    }
+
+    function takeElementByTag(tag) {
+        return document.querySelector(tag);
+    }
+
+    function createEl(tag) {
+        return document.createElement(tag);
+    }
+
+    function clearInputs(...fields) {
+        for (let field of fields) {
+            field.value = "";
+        }
+    }
+
+    loadRecords();
 }
 
 attachEvents();
-
-
-
-
-//80/100
-// function attachEvents() {
-//     const baseUrl = "http://localhost:3030/jsonstore/collections/students";
-//     const tBodyElement = document.querySelector("tbody");
-//     const submitBtn = document.getElementById("submit");
-//
-//     submitBtn.addEventListener("click", createRecord)
-//
-//     async function createRecord() {
-//         let firstName = document.querySelector("input[name=firstName]");
-//         let lastName = document.querySelector("input[name=lastName]");
-//         let facultyNumber = document.querySelector("input[name=facultyNumber]");
-//         let grade = document.querySelector("input[name=grade]");
-//
-//         let student = {
-//             firstName: firstName.value,
-//             lastName: lastName.value,
-//             facultyNumber: facultyNumber.value,
-//             grade: Number(grade.value)
-//         };
-//
-//         await fetch(baseUrl, {
-//             method: "POST",
-//             headers: {"Content-Type": "application/json"},
-//             body: JSON.stringify(student)
-//         });
-//
-//         firstName.value = ""
-//         lastName.value = ""
-//         facultyNumber.value = ""
-//         grade.value = ""
-//
-//         loadRecords();
-//     }
-//
-//     async function loadRecords() {
-//         tBodyElement.innerHTML = "";
-//
-//         const response = await fetch(baseUrl);
-//         const data = await response.json();
-//
-//         Object.values(data).forEach(student => {
-//             let firstNameTdElement = document.createElement("td");
-//             firstNameTdElement.textContent = student.firstName;
-//
-//             let lastNameTdElement = document.createElement("td");
-//             lastNameTdElement.textContent = student.lastName;
-//
-//             let facultyNumberTdElement = document.createElement("td");
-//             facultyNumberTdElement.textContent = student.facultyNumber;
-//
-//             let gradeTdElement = document.createElement("td");
-//             gradeTdElement.textContent = student.grade;
-//
-//             let rowElement = document.createElement("tr");
-//             rowElement.appendChild(firstNameTdElement);
-//             rowElement.appendChild(lastNameTdElement);
-//             rowElement.appendChild(facultyNumberTdElement);
-//             rowElement.appendChild(gradeTdElement);
-//             tBodyElement.appendChild(rowElement);
-//         });
-//     }
-//
-//     loadRecords()
-//
-// }
-//
-// attachEvents()
-

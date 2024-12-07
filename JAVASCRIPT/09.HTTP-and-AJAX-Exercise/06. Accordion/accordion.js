@@ -1,53 +1,85 @@
 function solution() {
-    const baseURL = "http://localhost:3030/jsonstore/advanced/articles/list";
-    const detailsURL = "http://localhost:3030/jsonstore/advanced/articles/details/";
-
-    let mainSection = document.getElementById("main");
-    mainSection.innerHTML = "";
+    const baseUrl = "http://localhost:3030/jsonstore/advanced/articles/list";
+    const mainSectionElement = takeElementByTag("#main");
 
     async function loadArticles() {
-        let articlesResponse = await fetch(baseURL);
-        let articles = await articlesResponse.json();
+        const response = await fetch(baseUrl);
+        const result = await response.json();
+        const articles = Object.values(result);
 
-        for (let articleObj of articles) {
-            let accordionElement = document.createElement("div");
-            accordionElement.className = "accordion";
+        const recordsElements = await Promise.all(articles.map(article =>
+            createRecord(article._id, article.title)));
 
-            accordionElement.innerHTML = `
-                <div class="head">
-                    <span>${articleObj.title}</span>
-                    <button class="button" id="${articleObj['_id']}">More</button>
-                </div>
-                <div class="extra">
-                    <p>Scalable Vector Graphics .....</p>
-                </div>
-            `
+        mainSectionElement.append(...recordsElements);
+    }
 
-            mainSection.appendChild(accordionElement)
-            let accordionButton = accordionElement.querySelector("button");
-            accordionButton.addEventListener("click", accordionButtonEvent);
+    async function createRecord(articleId, title) {
 
-            async function accordionButtonEvent() {
-                let detailsResponse = await fetch(detailsURL + articleObj["_id"])
-                let detailsArticle = await detailsResponse.json();
+        const divAccordionElement = createEl("div");
+        divAccordionElement.classList.add("accordion");
 
-                let extraContentElement = accordionElement.querySelector(".extra p");
-                extraContentElement.textContent = detailsArticle.content;
+        const divHeadElement = createEl("div");
+        divHeadElement.classList.add("head");
 
-                if (accordionButton.textContent === "More") {
-                    extraContentElement.parentElement.style.display = "block";
-                    accordionButton.textContent = "Less";
-                } else if (accordionButton.textContent === "Less") {
-                    extraContentElement.parentElement.style.display = "none";
-                    accordionButton.textContent = "More";
-                }
+        const spanHeadElement = createEl("span");
+        spanHeadElement.textContent = title;
 
-            }
+        const buttonElement = createEl("button");
+        buttonElement.classList.add("button");
+        buttonElement.id = articleId;
+        buttonElement.textContent = "MORE";
+
+        const divExtraElement = createEl("div");
+        divExtraElement.classList.add("extra");
+        divExtraElement.style.display = "none";
+
+        const pContentElement = createEl("p");
+
+        const textContentElement = await takeContent(articleId);
+        pContentElement.textContent = textContentElement;
+
+        divExtraElement.appendChild(pContentElement);
+
+        buttonElement.addEventListener("click", () => {
+            showExtra(buttonElement, divExtraElement)
+        });
+
+        divHeadElement.appendChild(spanHeadElement);
+        divHeadElement.appendChild(buttonElement);
+
+        divAccordionElement.appendChild(divHeadElement);
+        divAccordionElement.appendChild(divExtraElement);
+
+        return divAccordionElement;
+    }
+
+    async function takeContent(articleId) {
+        const articlesResponse = await fetch(`http://localhost:3030/jsonstore/advanced/articles/details/${articleId}`);
+        const result  = await articlesResponse.json()
+
+        return result.content;
+    }
+
+    function showExtra(buttonElement, divExtraElement) {
+        if (divExtraElement.style.display === "none") {
+            divExtraElement.style.display = "block";
+            buttonElement.textContent = "Less";
+        } else {
+            divExtraElement.style.display = "none";
+            buttonElement.textContent = "More";
         }
     }
 
+    function takeElementByTag(tag) {
+        return document.querySelector(tag);
+    }
+
+    function createEl(tag) {
+        return document.createElement(tag);
+    }
+
     loadArticles();
+
 }
 
-solution();
-
+solution()

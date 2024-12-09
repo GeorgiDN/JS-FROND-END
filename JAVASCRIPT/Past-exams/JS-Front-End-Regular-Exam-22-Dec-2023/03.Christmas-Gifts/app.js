@@ -17,9 +17,9 @@ editButton.addEventListener("click", editPresent);
 
 
 async function addPresent() {
-    const gift = presentInput.value;
-    const forWhom = forInput.value;
-    const price = priceInput.value;
+    const gift = gameNameInput.value;
+    const forWhom = gameTypeInput.value;
+    const price = maxPlayersInput.value;
 
     await fetch(baseUrl, {
         method: "POST",
@@ -29,18 +29,18 @@ async function addPresent() {
         body: JSON.stringify({ gift, for: forWhom, price })
     });
 
-    clearInputs(presentInput, forInput, priceInput);
+    clearInputs(gameNameInput, gameTypeInput, maxPlayersInput);
     await loadPresents();
 }
 
 async function editPresent() {
     const giftId = formElement.getAttribute("data-gift-id");
 
-    const gift = presentInput.value;
-    const forWhom = forInput.value;
-    const price = priceInput.value;
+    const gift = gameNameInput.value;
+    const forWhom = gameTypeInput.value;
+    const price = maxPlayersInput.value;
 
-    clearInputs(presentInput, forInput, priceInput);
+    clearInputs(gameNameInput, gameTypeInput, maxPlayersInput);
 
     await fetch(`${baseUrl}/${giftId}`, {
         method: "PUT",
@@ -97,9 +97,9 @@ function createEl(gift, forWhom, price, giftId) {
     changeButton.classList.add("change-btn");
     changeButton.textContent = "Change";
     changeButton.addEventListener("click", () => {
-        presentInput.value = gift;
-        forInput.value = forWhom;
-        priceInput.value = price;
+        gameNameInput.value = gift;
+        gameTypeInput.value = forWhom;
+        maxPlayersInput.value = price;
 
         editButton.removeAttribute("disabled");
         addButton.setAttribute("disabled", "disabled");

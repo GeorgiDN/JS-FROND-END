@@ -16,10 +16,16 @@ function solve() {
 
     let currentId = 0;
 
-    let labelSymbols = {
-        "Feature": "&#8865",
-        "Low Priority Bug": "&#9737",
-        "High Priority Bug": "&#9888",
+    const labelsSymbols = {
+        "Feature": "&#8865;",
+        "Low Priority Bug": "&#9737;",
+        "High Priority Bug": "&#9888;",
+    }
+
+    const classes = {
+        "Feature": "feature",
+        "Low Priority Bug": "low-priority",
+        "High Priority Bug": "high-priority"
     }
 
     createTaskButton.addEventListener("click", createTaskSection);
@@ -48,15 +54,8 @@ function solve() {
         const divTaskLabel = createEl("div");
         divTaskLabel.classList.add("task-card-label");
 
-        if (label === "Feature") {
-            divTaskLabel.classList.add("feature");
-        } else if (label === "Low Priority Bug") {
-            divTaskLabel.classList.add("low-priority");
-        } else if (label === "High Priority Bug") {
-            divTaskLabel.classList.add("high-priority");
-        }
-
-        divTaskLabel.innerHTML = `${label} ${labelSymbols[label]}`
+        divTaskLabel.classList.add(classes[label]);
+        divTaskLabel.innerHTML = `${label} ${labelsSymbols[label]}`
 
         const h3TaskTitleEl = createEl("h3");
         h3TaskTitleEl.classList.add("task-card-title");
@@ -143,5 +142,4 @@ function solve() {
     function clearInputs(...inputs) {
         inputs.forEach(input => (input.value = ""));
     }
-
 }

@@ -1,0 +1,246 @@
+@import url(https://fonts.googleapis.com/css2?family=Karla&display=swap);
+
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap);
+
+
+:root {
+    --red: #e14747;
+    --yellow: #fad87a;
+    --footer-color: #352b2a;
+    --white: #f8f0e9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Karla"; /* paragraph */
+    line-height: 1.2;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Cormorant Infant";
+}
+
+.header-section {
+    padding: 2em 8em;
+}
+
+.header-section {
+    position: relative;
+    display: block;
+    background: url('images/poster.jpg') center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header-section nav, 
+.header-section h1,
+.header-section p {
+    /* position: relative; */
+    z-index: 2;
+}
+
+.header-section nav {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header-section .logo img{
+    max-width: 110px;
+}
+
+.header-section nav ul {
+    display: flex;
+    gap: 3em;
+    
+}
+
+.header-section nav ul li {
+    list-style: none;
+    position: relative;
+    z-index: 200;
+    
+}
+
+.header-section nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-section h1 {
+    font-size: 90px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+    padding-top: 23rem;
+}
+
+.header-section p {
+    text-align: center;
+    color: #fff;
+    padding-top: 6rem;
+    padding-bottom: 20rem;
+}
+
+/* Second dection */
+
+.section-quote {
+    padding: 2em 25%;
+    background-color: var(--white);
+}
+
+.section-quote  blockquote {
+    font-style: italic;
+    font-family: "Cormorant Infant";
+    color: #000;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 1;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* support */
+
+.support {
+    background-color: var(--red);
+    color: #fff;
+    padding: 3.5rem;
+    text-align: center;
+    
+}
+
+.support .support-header {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 2.5rem;
+}
+
+.support p:last-of-type {
+    max-width: 25ch;
+    text-align: center;
+    margin: 0 auto; 
+}
+
+/* mind-set */
+
+.mind-set {
+    background-color: var(--white);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.mind-set img {
+    max-width: 500px;
+}
+
+.mind-set .desc {
+    max-width: 500px;
+    margin: 0 auto; 
+}
+
+.mind-set h2 {
+    text-align: center;
+    font-size: 60px;
+    padding: 3rem 0rem 4rem;
+}
+
+.mind-set p {
+    padding-bottom: 3rem
+}
+
+.mind-set button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.3em;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.mind-set .btn {
+    display: flex;
+    justify-content: center;
+}
+
+.mind-set .read-all {
+   margin-top: 3rem;
+}
+
+/* local-guide */
+
+.local-guide {
+    background-color: var(--red);
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.local-guide h2 {
+    max-width: 550px;
+    margin: 0 auto;
+    font-size: 60px;
+    padding-bottom: 4rem;
+}
+
+.local-guide p {
+    padding: 0rem 25%;
+    text-align: center;
+    padding-bottom: 3.5rem;
+}
+
+.local-guide button {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--yellow);
+    border-radius: 2rem;
+    border: none;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--footer-color);
+    padding: 3rem 12rem;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.footer img {
+    width: 70px;
+    padding-bottom: 2.5rem;
+}
+
+.footer p:not(:last-of-type) {
+    max-width: 48ch;
+    padding-bottom: 1.5rem;
+}
+
+.footer .copy-right {
+    font-size: 14px;
+    color: #aaa;
+}

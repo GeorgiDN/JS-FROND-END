@@ -1,0 +1,119 @@
+@media (max-width: 600px){
+    
+    .placeholder {
+        padding-top: 2.6rem;
+        height: 200px;
+    }
+
+    .tm-header {
+        left: 12%;
+    }
+
+    header nav {
+        position: relative;
+        left: 45px;
+    }
+    
+
+    main {
+        font-size: 26px;
+    }
+
+    main .row {
+        align-items: center;
+    }
+
+    .tm-welcome-section {
+        width: auto;
+    }
+
+    .tm-welcome-section {
+        max-width: auto;
+    }
+
+    .tm-section-title {
+        margin-left: 2rem;
+        font-size: 3.4rem;
+    }
+
+    .tm-paging-link {
+        font-size: 2rem;
+    }
+
+    .tm-gallery-page {
+        margin: 0rem 0rem;
+        flex-direction: column;
+    }
+
+    .tm-gallery {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tm-gallery-item {
+        max-width: 500px;
+    }
+
+    .tm-gallery h4 {
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    .tm-gallery p {
+        font-size: 18px;
+    }
+
+    .tm-gallery-item .tm-gallery-price {
+        font-size: 35px !important;
+    } 
+
+    .tm-welcome-section {
+        margin-bottom: 30px;
+    }
+
+    .tm-cta-section {
+        max-width: 450px;
+    }
+
+    .tm-cta-section {
+        max-width: 450px;
+    }
+
+    .tm-description-figure {
+        max-width: 500px;
+    }
+
+    .tm-container-inner {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .tm-cta-section {
+        max-width: 600px;
+    }
+
+    section:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 50px;
+    }
+
+    .tm-gallery-title {
+        font-size: 1.8rem;
+    }
+
+    .tm-right {
+        font-size: 22px;
+        position: relative;
+        right: 40px;
+    }
+
+    footer p {
+        font-size: 24px;
+    }
+}

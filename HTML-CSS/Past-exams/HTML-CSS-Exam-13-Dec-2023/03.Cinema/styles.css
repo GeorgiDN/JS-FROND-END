@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap);
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+
+:root {
+    --light-green: #56dbb1;
+    --light-gray: #ececec;
+    --brown: #974d1b;
+    --dark: #353434;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Ubuntu";
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8rem 2.5rem 8rem;
+}
+
+header .name {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+}
+
+header .divider {
+    width: 2px;
+    height: 35px;
+    background-color: #ccc;
+    position: relative;
+    top: 5px;
+}
+
+header .name p {
+    opacity: 0.6;
+}
+
+header nav ul {
+    display: flex;
+    gap: 0.1rem;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul a {
+    text-decoration: none;
+    padding: 1rem;
+    background-color: var(--light-gray);
+    color: #7e7d7d;
+}
+
+header nav ul li:first-of-type a {
+    background-color: var(--light-green);
+    color: #000;
+}
+
+/* image */
+.image img{
+    width: 100%;
+}
+
+.information {
+    padding: 4rem 13rem;
+}
+
+.first-desc {
+    background-color: var(--light-green);
+    margin-top: -0.5rem;
+}
+
+
+/* second-desc */
+
+.second-desc {
+    display: flex;
+    gap: 3rem;
+    background-color: var(--dark);
+    color: #fff;
+    text-align: center;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.second-desc .border {
+    content: "";
+    width: 20rem;
+    height: 2px;
+    background-color: #fff;
+}
+
+.second-desc p{
+    opacity: 0.2;
+}
+
+.second-desc article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.second-desc i {
+    font-size: 4rem;
+    background-color: var(--light-green);
+    width: 6.5rem;
+    height: 6rem;
+    padding: 1rem;
+}
+
+
+/* contact */
+
+.contact {
+    text-align: center;
+    padding: 4rem;
+}
+
+.contact h2 {
+    font-size: 2.2rem;
+    opacity: 0.6;
+}
+
+.contact h3 {
+    font-size: 1.1rem;
+    color: darkgray;
+}
+
+.contact button {
+    padding: 1rem 2rem;
+    background-color: var(--brown);
+    border: none;
+    margin-top: 2rem;
+    color: #fff;
+}
+
+
+/* third-desc */
+.third-desc {
+    display: flex;
+    background-color: var(--dark);
+    gap: 3rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.third-desc article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.third-desc article h2 {
+    color: #fff;
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.third-desc article p {
+    color: #fff;
+    opacity: 0.2;
+}
+
+/* footer */
+
+footer {
+    font-size: 1rem;
+    background-color: #1b9772;
+    text-align: center;
+    padding: 4rem;
+}
+
+footer p {
+    color: #ccc;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+footer span {
+    color: #fff;
+    opacity: 1;
+}

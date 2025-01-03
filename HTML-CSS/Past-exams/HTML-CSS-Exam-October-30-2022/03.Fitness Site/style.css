@@ -1,0 +1,213 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif);
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "PT Sans", "PT Serif", sans-serif;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+
+a {
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem 3rem 1rem;
+    background-color: #d01919;
+    color: #fff;
+}
+
+header ul {
+    display: flex;
+    gap: 0.8rem;
+    font-weight: bold;
+}
+
+header ul li a {
+    color: #fff;
+}
+
+header .phone-num,
+header .address {
+    display: flex;
+    gap: 0.7rem;
+}
+
+
+main .fitness-main {  
+    display: block;
+    background: url(image/fitness-main.jpg) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+    padding: 1.5rem 3rem 8rem;
+}
+
+.fitness-main ul {
+    display: flex;
+    justify-content: end;
+    gap: 5rem;
+}
+
+.fitness-main ul li a, 
+.fitness-main p, 
+.fitness-main h1,
+.fitness-main a { 
+    color: #fff;
+}
+
+
+.fitness-main .fitness-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+
+.fitness-main h1 {
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+    padding-bottom: 2.5rem;
+}
+
+
+.fitness-main p {
+    max-width: 52ch;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.fitness-main .btn {
+    background-color: #d01919;
+    padding: 0.3rem 1rem;
+    font-weight: bold;
+    border-radius: 0.3rem;
+}
+
+
+main .gallery {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0rem 4rem;
+}
+
+.gallery-header {
+    position: relative;
+}
+
+.gallery-header h2 {
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 2.2rem;
+}
+
+.gallery-header .sep {
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #d01919;
+    position: absolute;
+    left: 49%;
+    top: 4.4rem;
+}
+
+.gallery .pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9rem;
+}
+
+.gallery article {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+}
+
+.gallery article h3 {
+    text-align: center;
+    padding-bottom: 1rem;
+    color: #d01919;
+}
+
+.gallery article p {
+    text-align: center;
+}
+
+
+.welcome .image {
+    width: 15%;
+    padding-bottom: 0.8rem;
+}
+
+.welcome .image img {
+    width: 100%;
+}
+
+
+.coaches {
+    background-color: #efefef;
+}
+
+.coaches article h3 {
+    font-size: 16px;
+    padding-top: 0.5rem;
+}
+
+.coaches article h2 {
+    font-size: 18px;
+    padding-top: 0.5rem;
+}
+
+
+.coaches .image {
+    width: 89%;
+    padding-bottom: 0.8rem;
+    border-radius: 0.4rem;
+}
+
+.coaches .image img {
+    width: 100%;
+    border-radius: 0.4rem;
+}
+
+.coaches p {
+    color: #a4a4a4;
+}
+
+.coaches .pages {
+    gap: 10rem;
+}
+
+.coaches article {
+    flex-basis: 22%;
+}
+
+footer {
+    padding: 0.8rem;
+    background-color: #d01919;
+    text-align: center;
+}

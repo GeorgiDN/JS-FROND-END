@@ -1,0 +1,105 @@
+@media (max-width: 600px) {
+    nav {
+        display: none;
+    }
+
+    .site-main {
+        margin: 0;
+    }
+
+    .entry-header {
+        max-width: 100%;
+        font-family: "Strangelove", "Amatic SC", cursive;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+            url("./images/header-image.jpg") center no-repeat;
+        background-size: cover;
+        color: #fff;
+        padding: 10rem 0 10rem 0;
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 5px;
+        background-size: 250%
+    }
+
+    .site-information-text button  {
+        width: 100px !important;
+    }
+
+    .site-form-container .entry-title {
+        font-size: 8px !important;
+    }
+
+    .site-logos-container {
+        min-width: 100%;
+    }
+
+    .site-information-image {
+        display: none;
+    }
+
+    .site-information-text {
+        text-align: center;
+        flex-basis: 100%;
+        align-items: center;
+    }
+
+    .entry-description {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    main .button-primary {
+        width: 130px;
+    }
+
+    .site-form {
+        margin-top: 0rem;
+    }
+
+    .entry-title {
+        font-size: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .site-form form > p {
+        flex-direction: column;
+    }
+
+    .site-form input {
+        width: 100%;
+    }
+
+    .site-form button {
+        text-align: center;
+        margin: 0rem;
+        align-self: center;
+    }
+
+    .site-blog-container {
+        margin-top: 0rem;
+    }
+
+    .site-posts {
+        flex-direction: column;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .entry-title {
+        font-size: 2.8rem;
+        text-align: center;
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

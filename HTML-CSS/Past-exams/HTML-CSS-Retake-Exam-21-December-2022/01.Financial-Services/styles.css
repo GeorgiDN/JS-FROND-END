@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --bgc-blue:#819daf;
+    --blue: #327dc4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins';
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+a {
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.contaner {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards-section {
+    display: flex;
+    gap: 1rem;
+}
+
+.cards-section .card {
+    max-width: 430px;
+    background-color: var(--bgc-blue);
+    border-radius: 1.4rem;
+}
+
+.cards-section .card .image {
+    overflow: hidden;
+}
+
+.cards-section .card .image img{
+    width: 100%;
+    border-radius: 1.4rem;
+}
+
+.container .header-section {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.container .header-section h1 {
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+.container .header-section span {
+    color: var(--blue);
+}
+
+.card .desc {
+    padding: 1.5rem 2rem 1.7rem 2rem;
+}
+
+.card h2 {
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.card p {
+    padding-bottom: 1.6rem;
+}
+
+.card a {
+    background-color: var(--blue);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    border-radius: 1.2rem;
+    border: 1px solid blue;
+    outline: 1px solid #fff;
+}

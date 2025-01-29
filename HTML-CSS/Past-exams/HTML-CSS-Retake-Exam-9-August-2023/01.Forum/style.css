@@ -1,0 +1,118 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 1300px;
+    display: flex;
+    background: url(images/background.jpg);
+    padding: 2rem 4rem;
+    gap: 1.5rem;
+}
+
+section {
+    background-color: #fff;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    gap: 1rem;
+}
+
+.display-row {
+    display: flex;
+    padding: 3rem 2rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+.display-row .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    margin-top: 1rem;
+}
+
+
+.display-row i {
+    font-size: 3rem;
+}
+
+
+.display-row p {
+    opacity: 0.8;
+}
+
+.display-row h3 {
+    font-size: 1.4rem;
+}
+
+
+.display-row img {
+    width: 170px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.right-section {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1.8rem 1.5rem 1.8rem;
+    justify-content: space-between;
+}
+
+
+.right-section i {
+    font-size: 5rem;
+    padding-bottom: 20%;
+}
+
+.right-section p {
+    opacity: 0.8;
+}
+
+
+.right-section .footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+
+.right-section img {
+    width: 90px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+
+.right-section .footer h3 {
+    font-size: 1.4rem;
+}
+
+.right-section .footer p {
+    font-size: 12px;
+    opacity: 0.9;
+}
